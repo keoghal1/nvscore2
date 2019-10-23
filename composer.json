@@ -1,0 +1,72 @@
+{
+  "name": "novartis_core",
+  "description": "Novartis CORE Distribution.",
+  "homepage": "http://packages.example.org",
+  "type": "drupal-profile",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "acquia/blt": "9.2.8",
+    "drupal/shield": "^1.2",
+    "drupal/admin_toolbar": "^1.24",
+    "drupal/ga_login": "^1.0@alpha",
+    "drupal/tfa": "^1.0@alpha",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6.5",
+    "drupal-composer/drupal-scaffold": "^2.5",
+    "drupal/console": "^1.0.2",
+    "drupal/core": "^8.7.0",
+    "drush/drush": "^9.0.0",
+    "vlucas/phpdotenv": "^2.4",
+    "webmozart/path-util": "^2.3",
+    "zaporylie/composer-drupal-optimizations": "^1.0"
+  },
+  "require-dev": {
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "installer-paths": {
+      "docroot/core": [
+        "type:drupal-core"
+      ],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "docroot/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "docroot/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "docroot/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ]
+    },
+    "drupal-scaffold": {
+      "initial": {
+        ".editorconfig": "../.editorconfig",
+        ".gitattributes": "../.gitattributes"
+      }
+    }
+  }
+
+}
