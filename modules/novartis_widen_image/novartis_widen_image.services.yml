@@ -1,0 +1,4 @@
+services:
+  novartis_widen_image.widen_image_validation:
+    class: Drupal\novartis_widen_image\WidenImageValidation
+    arguments: ['']

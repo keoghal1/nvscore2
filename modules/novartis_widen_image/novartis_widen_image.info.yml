@@ -1,0 +1,8 @@
+name: Novartis Widen Image
+description: 'Provides widen image integration on Novartis dolphin site.'
+type: module
+core: 8.x
+package: Dolphin
+
+dependencies:
+  - lightning_media

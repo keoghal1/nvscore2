@@ -1,0 +1,9 @@
+video_embed_kaltura.kaltura_settings:
+  path: '/admin/config/media/kaltura-settings'
+  defaults:
+    _form: '\Drupal\video_embed_kaltura\Form\KalturaSettings'
+    _title: 'Kaltura Settings'
+  requirements:
+    _permission: 'administer kaltura settings'
+  options:
+    _admin_route: TRUE
