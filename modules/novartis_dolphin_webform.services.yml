@@ -1,4 +1,0 @@
-services:
-  novartis_dolphin_webform.gpg_encryption:
-    class: Drupal\novartis_dolphin_webform\GpgEncryption
-    arguments: ['@config.factory', '@settings']

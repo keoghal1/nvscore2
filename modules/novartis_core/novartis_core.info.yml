@@ -1,5 +1,0 @@
-name: 'Novartis Core module'
-description: Contains various useful code and customization for novartis sites.
-type: module
-core: 8.x
-package: Novartis Core

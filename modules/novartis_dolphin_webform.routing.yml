@@ -1,7 +1,0 @@
-novartis_dolphin_webform.webform_global_settings:
-  path: '/admin/dolphin/webform-global-settings'
-  defaults:
-    _form: '\Drupal\novartis_dolphin_webform\Form\WebformGlobalSettings'
-    _title: 'Webform Global Settings'
-  requirements:
-    _permission: 'administer site configuration'

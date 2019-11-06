@@ -1,5 +1,0 @@
-video_embed_kaltura.kaltura_settings:
-  title: 'Kaltura settings'
-  route_name: video_embed_kaltura.kaltura_settings
-  description: 'Configure kaltura settings'
-  parent: system.admin_config_media
