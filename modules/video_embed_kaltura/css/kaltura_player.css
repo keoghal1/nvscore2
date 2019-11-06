@@ -1,0 +1,72 @@
+.largePlayBtn {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border: none !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  -webkit-transition: opacity 800ms, height 0s !important;
+  -moz-transition: opacity 800ms, height 0s !important;
+  transition: opacity 800ms, height 0s !important;
+  -webkit-transition-delay: 0s, 0s !important;
+  -moz-transition-delay: 0s, 0s !important;
+  transition-delay: 0s, 0s !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.largePlayBtn:hover {
+  cursor: pointer !important;
+}
+
+.largePlayBtn:before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-50%) !important;
+  width: 80px !important;
+  height: 80px !important;
+  background-color: #d60e63 !important;
+  border-radius: 100% !important;
+  -webkit-transition: border-color 300ms !important;
+  -moz-transition: border-color 300ms !important;
+  transition: border-color 300ms !important;
+}
+
+.largePlayBtn:after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: calc(50% + 2px) !important;
+  transform: translateX(-50%) translateY(-50%) !important;
+  height: 0 !important;
+  width: 0 !important;
+  border-left: 20px solid #fff !important;
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  -webkit-transition: border-color 300ms !important;
+  -moz-transition: border-color 300ms !important;
+  transition: border-color 300ms !important;
+}
+
+.largePlayBtn:focus:before,
+.largePlayBtn:hover:before {
+  background-color: #fff !important;
+}
+
+.largePlayBtn:focus:after,
+.largePlayBtn:hover:after {
+  border-left-color: #d60e63 !important;
+}
+
+.largePlayBtn:after {
+  left: calc(50% + 4px) !important;
+  border-left: 35px solid #fff !important;
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+}

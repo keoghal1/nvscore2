@@ -1,0 +1,9 @@
+name: Video Embed Field Kaltura
+type: module
+description: 'A video_embed_field integration with Kaltura.'
+package: Video Embed Field
+core: 8.x
+configure: video_embed_kaltura.kaltura_settings
+dependencies:
+  - drupal:video_embed_field
+  - lightning_media
