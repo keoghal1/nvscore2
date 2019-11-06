@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Provide customizations so that Kaltura videos can be used and embedded.
+ */
+
+use Drupal\lightning_core\OverrideHelper as Override;
+use Drupal\video_embed_kaltura\Plugin\Field\FieldType\KalturaEmbedField;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_field_info_alter().
+ */
+function video_embed_kaltura_field_info_alter(&$info) {
+  Override::pluginClass($info['video_embed_field'], KalturaEmbedField::class);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function video_embed_kaltura_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'entity_browser_video_browser_form':
+    case 'entity_browser_media_browser_form':
+      $form['widget']['input']['#placeholder'] = t('Enter a URL or Kaltura Script Embed Code...');
+      $form['widget']['input']['#description'] = t('Add a Kaltura or YouTube embed');
+      break;
+
+    case 'media_video_edit_form':
+      $entity = $form_state->getFormObject()->getEntity();
+      if ($entity->bundle() == 'video') {
+        $form['actions']['submit']['#submit'][] = 'video_embed_kaltura_set_custom_thumb';
+        // Pass original data in form array so that we can reuse it later.
+        $form['kaltura_original_data'] = [
+          '#type' => 'value',
+          '#value' => [
+            'input' => $entity->get('field_media_video_embed_field')->first()->getValue(),
+            'thumbnail' => $entity->get('thumbnail')->first()->getValue(),
+          ],
+        ];
+      }
+      break;
+  }
+}
+
+/**
+ * Custom submit handler for kaltura media entity.
+ */
+function video_embed_kaltura_set_custom_thumb($form, FormStateInterface $form_state) {
+  $kaltura_original_data = $form_state->getValue('kaltura_original_data');
+  if (!empty($kaltura_original_data)) {
+    $new_submitted_thumb = $form_state->getValue('thumbnail');
+    $new_submitted_thumb_id = key($new_submitted_thumb['current']);
+    if ($kaltura_original_data['thumbnail']['target_id'] != $new_submitted_thumb_id) {
+      // Thumbnail has changed by user/Kaltura API.
+      // Now get the current media entity to confirm if it needs resaving.
+      $entity = $form_state->getFormObject()->getEntity();
+      $thumbnail_data = $entity->get('thumbnail')->first()->getValue();
+      if ($thumbnail_data['target_id'] != $new_submitted_thumb_id) {
+        // Since these values are not equal that means api has changed the thumb
+        // and now we need to restore it.
+        $thumbnail_data['target_id'] = $new_submitted_thumb_id;
+        $thumbnail_data['alt'] = $new_submitted_thumb['current'][$new_submitted_thumb_id]['meta']['alt'];
+        $entity->set('thumbnail', $thumbnail_data);
+        $entity->save();
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function video_embed_kaltura_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'media' && !empty($fields['thumbnail'])) {
+    $fields['thumbnail']->setDisplayConfigurable('form', TRUE);
+  }
+}

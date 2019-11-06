@@ -1,0 +1,5 @@
+novartis_dolphin_webform.webform_global_settings_menu:
+  title: 'Webform Global Settings'
+  route_name: novartis_dolphin_webform.webform_global_settings
+  description: 'Webform Global Settings'
+  parent: novartis_dolphin.admin_dolphin
