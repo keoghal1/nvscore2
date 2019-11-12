@@ -29,6 +29,7 @@
     "drupal/config_split": "^1.0.0",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.7.0",
+    "drupal-composer/drupal-scaffold": "^2.6",
     "drupal/devel": "^2.0.0",
     "drupal/ga_login": "^1.0@alpha",
     "drupal/qa_accounts": "^1.0.0-alpha1",
