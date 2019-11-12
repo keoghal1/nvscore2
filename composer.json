@@ -2,7 +2,7 @@
   "name": "novartis/nvs-core",
   "description": "Novartis CORE Distribution.",
   "homepage": "http://packages.example.org",
-  "type": "drupal-profile",
+  "type": "drupal-module",
   "repositories": {
     "drupal": {
       "type": "composer",
