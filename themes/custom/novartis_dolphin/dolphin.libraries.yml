@@ -1,0 +1,51 @@
+ltr_styles:
+  css:
+    component:
+      pattern-lab/public/css/styles.min.css: { minified: true }
+  js:
+    pattern-lab/public/js/index.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - dolphin/slickslider
+    - dolphin/global-functions
+rtl_styles:
+  css:
+    component:
+      pattern-lab/public/css/styles-rtl.min.css: { minified: true }
+  js:
+    pattern-lab/public/js/index.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - dolphin/slickslider
+    - dolphin/global-functions
+bootstrap:
+  js:
+    /libraries/bootstrap/js/bootstrap.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap/css/bootstrap.min.css: {}
+color_ltr:
+  css:
+    theme:
+      pattern-lab/public/css/styles.css: {}
+  dependencies:
+    - color/drupal.color
+color_rtl:
+  css:
+    theme:
+      pattern-lab/public/css/styles-rtl.css: {}
+  dependencies:
+    - color/drupal.color
+slickslider:
+  css:
+    component:
+      /libraries/slick-carousel/slick/slick.css: {}
+      /libraries/slick-carousel/slick/slick-theme.css: {}
+  js:
+    /libraries/slick-carousel/slick/slick.js: {}
+    /libraries/jquery-touchswipe/jquery.touchSwipe.min.js: {}
+global-functions:
+  js:
+    pattern-lab/public/js/functions.js: {}

@@ -1,0 +1,30 @@
+.node--type-article {
+  @media #{$small} {
+    .paragraph--type--content-container {
+      > div {
+        padding: 0 calc-rem(15px);
+      }
+    }
+  }
+  @media #{$desktop} {
+    section.region-content {
+      margin: 0;
+    }
+
+    section.region-sidebar {
+      margin: 0;
+    }
+  }
+
+  @media #{$wide} {
+    section.region-content {
+      padding-right: calc-rem(90px);
+      margin: 0;
+    }
+
+    section.region-sidebar {
+      padding-left: calc-rem(20px);
+      margin: 0;
+    }
+  }
+}

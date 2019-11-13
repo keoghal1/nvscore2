@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["text-formatted", "field--name-field-body"]
+    }
+  },
+  "items": [{
+    "content": "Button"
+  }]
+}

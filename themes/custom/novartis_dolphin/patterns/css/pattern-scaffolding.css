@@ -1,0 +1,142 @@
+/**
+ * This stylesheet is for styles you want to include only when displaying demo
+ * styles for grids, animations, color swatches, etc.
+ * These styles will not be your production CSS.
+ */
+#sg-patterns {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  max-width: 100%;
+  padding: 0 0.5em;
+}
+
+.demo-animate, .placeholder-bg, #atoms-cta-secondary-white .sg-pattern-example {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sg-colors,
+.sg-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sg-colors .sg-info {
+  font-size: calc-rem(16px);
+}
+
+.sg-colors li,
+.sg-icons li {
+  padding: 0.3em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.sg-colors li {
+  width: 270px;
+  margin: 0 calc-rem(15px) calc-rem(15px) 0;
+}
+
+.sg-icons li {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  margin: 0 0.5em 0.5em 0;
+  min-width: 5em;
+  max-width: 14em;
+}
+
+.sg-swatch {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+}
+
+.sg-label {
+  font-size: 90%;
+  line-height: 1;
+}
+
+code {
+  color: #4a4a4a !important;
+}
+
+/**
+ * @file
+ * Utility classes to hide elements in different ways.
+ */
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be collapsible details that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen readers.
+ *
+ * Used for information required for screen reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/**
+ * The .focusable class extends the .visually-hidden class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+  width: auto;
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout.
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/**
+ * Provides grey placeholder for camouflaged elements.
+ */
+.placeholder-bg, #atoms-cta-secondary-white .sg-pattern-example {
+  text-align: left;
+}
+
+/**
+ * Custom overrides.
+ */
+.brand-primary {
+  color: #0460a9;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhdHRlcm4tc2NhZmZvbGRpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztHQUlHO0FBQ0g7RUFDRSwwQ0FBeUM7RUFDekMsa0NBQWlDO0VBQ2pDLGdCQUFlO0VBQ2YsaUJBQWdCO0NBQ2pCOztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLGFBQVk7RUFDWixtQkFBa0I7RUFDbEIsbUJBQWtCO0VBQ2xCLG1CQUFrQjtFQUNsQixnQkFBZTtDQUNoQjs7QUFFRDs7RUFFRSxxQkFBb0I7RUFDcEIscUJBQW9CO0VBQ3BCLGNBQWE7RUFDYixvQkFBbUI7RUFDbkIsZ0JBQWU7RUFDZiw0QkFBMkI7RUFDM0Isc0JBQXFCO0VBQ3JCLHFCQUFvQjtDQUNyQjs7QUFDRDtFQUNFLDBCQUF5QjtDQUMxQjs7QUFDRDs7RUFFRSxlQUFjO0VBQ2QsdUJBQXNCO0VBQ3RCLG1CQUFrQjtDQUNuQjs7QUFDRDtFQUNFLGFBQVk7RUFDWiwwQ0FBeUM7Q0FDMUM7O0FBQ0Q7RUFDRSxvQkFBbUI7RUFDbkIsZUFBYztFQUNkLFdBQVU7RUFDVix3QkFBdUI7RUFDdkIsZUFBYztFQUNkLGdCQUFlO0NBQ2hCOztBQUNEO0VBQ0UsZUFBYztFQUNkLFlBQVc7RUFDWCxxQkFBb0I7RUFDcEIsbUJBQWtCO0NBQ25COztBQUVEO0VBQ0UsZUFBYztFQUNkLGVBQWM7Q0FDZjs7QUFFRDtFQUNFLDBCQUF5QjtDQUMxQjs7QUFHRDs7O0dBR0c7QUFFSDs7Ozs7OztHQU9HO0FBQ0g7RUFDRSxjQUFhO0NBQ2Q7O0FBRUQ7Ozs7Ozs7R0FPRztBQUNIO0VBQ0UsOEJBQTZCO0VBQzdCLCtCQUE4QjtFQUM5QixpQkFBZ0I7RUFDaEIsWUFBVztFQUNYLFdBQVU7RUFDVixrQkFBaUI7Q0FDbEI7O0FBRUQ7OztHQUdHO0FBQ0g7O0VBRUUsNEJBQTJCO0VBQzNCLFdBQVU7RUFDVixrQkFBaUI7RUFDakIsYUFBWTtFQUNaLFlBQVc7Q0FDWjs7QUFFRDs7R0FFRztBQUNIO0VBQ0UsbUJBQWtCO0NBQ25COztBQUVEOztHQUVHO0FBQ0g7RUFHRSxpQkFBZ0I7Q0FDakI7O0FBRUQ7O0dBRUc7QUFPSDtFQUNFLGVBQWM7Q0FDZiIsImZpbGUiOiJwYXR0ZXJuLXNjYWZmb2xkaW5nLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhpcyBzdHlsZXNoZWV0IGlzIGZvciBzdHlsZXMgeW91IHdhbnQgdG8gaW5jbHVkZSBvbmx5IHdoZW4gZGlzcGxheWluZyBkZW1vXG4gKiBzdHlsZXMgZm9yIGdyaWRzLCBhbmltYXRpb25zLCBjb2xvciBzd2F0Y2hlcywgZXRjLlxuICogVGhlc2Ugc3R5bGVzIHdpbGwgbm90IGJlIHlvdXIgcHJvZHVjdGlvbiBDU1MuXG4gKi9cbiNzZy1wYXR0ZXJucyB7XG4gIC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveCAhaW1wb3J0YW50O1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94ICFpbXBvcnRhbnQ7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMCAwLjVlbTtcbn1cblxuLmRlbW8tYW5pbWF0ZSB7XG4gIGJhY2tncm91bmQ6ICNkZGQ7XG4gIHBhZGRpbmc6IDFlbTtcbiAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uc2ctY29sb3JzLFxuLnNnLWljb25zIHtcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICBkaXNwbGF5OiBmbGV4O1xuICAtbXMtZmxleC13cmFwOiB3cmFwO1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGxpc3Qtc3R5bGU6IG5vbmUgIWltcG9ydGFudDtcbiAgcGFkZGluZzogMCAhaW1wb3J0YW50O1xuICBtYXJnaW46IDAgIWltcG9ydGFudDtcbn1cbi5zZy1jb2xvcnMgLnNnLWluZm8ge1xuICBmb250LXNpemU6IGNhbGMtcmVtKDE2cHgpO1xufVxuLnNnLWNvbG9ycyBsaSxcbi5zZy1pY29ucyBsaSB7XG4gIHBhZGRpbmc6IDAuM2VtO1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG59XG4uc2ctY29sb3JzIGxpIHtcbiAgd2lkdGg6IDI3MHB4O1xuICBtYXJnaW46IDAgY2FsYy1yZW0oMTVweCkgY2FsYy1yZW0oMTVweCkgMDtcbn1cbi5zZy1pY29ucyBsaSB7XG4gIC13ZWJraXQtYm94LWZsZXg6IDE7XG4gIC1tcy1mbGV4OiBhdXRvO1xuICBmbGV4OiBhdXRvO1xuICBtYXJnaW46IDAgMC41ZW0gMC41ZW0gMDtcbiAgbWluLXdpZHRoOiA1ZW07XG4gIG1heC13aWR0aDogMTRlbTtcbn1cbi5zZy1zd2F0Y2gge1xuICBkaXNwbGF5OiBibG9jaztcbiAgaGVpZ2h0OiA0ZW07XG4gIG1hcmdpbi1ib3R0b206IDAuM2VtO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG5cbi5zZy1sYWJlbCB7XG4gIGZvbnQtc2l6ZTogOTAlO1xuICBsaW5lLWhlaWdodDogMTtcbn1cblxuY29kZSB7XG4gIGNvbG9yOiAjNGE0YTRhICFpbXBvcnRhbnQ7XG59XG5cbi8vIGhpZGRlbi5tb2R1bGUuY3NzXG4vKipcbiAqIEBmaWxlXG4gKiBVdGlsaXR5IGNsYXNzZXMgdG8gaGlkZSBlbGVtZW50cyBpbiBkaWZmZXJlbnQgd2F5cy5cbiAqL1xuXG4vKipcbiAqIEhpZGUgZWxlbWVudHMgZnJvbSBhbGwgdXNlcnMuXG4gKlxuICogVXNlZCBmb3IgZWxlbWVudHMgd2hpY2ggc2hvdWxkIG5vdCBiZSBpbW1lZGlhdGVseSBkaXNwbGF5ZWQgdG8gYW55IHVzZXIuIEFuXG4gKiBleGFtcGxlIHdvdWxkIGJlIGNvbGxhcHNpYmxlIGRldGFpbHMgdGhhdCB3aWxsIGJlIGV4cGFuZGVkIHdpdGggYSBjbGlja1xuICogZnJvbSBhIHVzZXIuIFRoZSBlZmZlY3Qgb2YgdGhpcyBjbGFzcyBjYW4gYmUgdG9nZ2xlZCB3aXRoIHRoZSBqUXVlcnkgc2hvdygpXG4gKiBhbmQgaGlkZSgpIGZ1bmN0aW9ucy5cbiAqL1xuLmhpZGRlbiB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi8qKlxuICogSGlkZSBlbGVtZW50cyB2aXN1YWxseSwgYnV0IGtlZXAgdGhlbSBhdmFpbGFibGUgZm9yIHNjcmVlbiByZWFkZXJzLlxuICpcbiAqIFVzZWQgZm9yIGluZm9ybWF0aW9uIHJlcXVpcmVkIGZvciBzY3JlZW4gcmVhZGVyIHVzZXJzIHRvIHVuZGVyc3RhbmQgYW5kIHVzZVxuICogdGhlIHNpdGUgd2hlcmUgdmlzdWFsIGRpc3BsYXkgaXMgdW5kZXNpcmFibGUuIEluZm9ybWF0aW9uIHByb3ZpZGVkIGluIHRoaXNcbiAqIG1hbm5lciBzaG91bGQgYmUga2VwdCBjb25jaXNlLCB0byBhdm9pZCB1bm5lY2Vzc2FyeSBidXJkZW4gb24gdGhlIHVzZXIuXG4gKiBcIiFpbXBvcnRhbnRcIiBpcyB1c2VkIHRvIHByZXZlbnQgdW5pbnRlbnRpb25hbCBvdmVycmlkZXMuXG4gKi9cbi52aXN1YWxseS1oaWRkZW4ge1xuICBwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcbiAgY2xpcDogcmVjdCgxcHgsIDFweCwgMXB4LCAxcHgpO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBoZWlnaHQ6IDFweDtcbiAgd2lkdGg6IDFweDtcbiAgd29yZC13cmFwOiBub3JtYWw7XG59XG5cbi8qKlxuICogVGhlIC5mb2N1c2FibGUgY2xhc3MgZXh0ZW5kcyB0aGUgLnZpc3VhbGx5LWhpZGRlbiBjbGFzcyB0byBhbGxvd1xuICogdGhlIGVsZW1lbnQgdG8gYmUgZm9jdXNhYmxlIHdoZW4gbmF2aWdhdGVkIHRvIHZpYSB0aGUga2V5Ym9hcmQuXG4gKi9cbi52aXN1YWxseS1oaWRkZW4uZm9jdXNhYmxlOmFjdGl2ZSxcbi52aXN1YWxseS1oaWRkZW4uZm9jdXNhYmxlOmZvY3VzIHtcbiAgcG9zaXRpb246IHN0YXRpYyAhaW1wb3J0YW50O1xuICBjbGlwOiBhdXRvO1xuICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDogYXV0bztcbn1cblxuLyoqXG4gKiBIaWRlIHZpc3VhbGx5IGFuZCBmcm9tIHNjcmVlbiByZWFkZXJzLCBidXQgbWFpbnRhaW4gbGF5b3V0LlxuICovXG4uaW52aXNpYmxlIHtcbiAgdmlzaWJpbGl0eTogaGlkZGVuO1xufVxuXG4vKipcbiAqIFByb3ZpZGVzIGdyZXkgcGxhY2Vob2xkZXIgZm9yIGNhbW91ZmxhZ2VkIGVsZW1lbnRzLlxuICovXG4ucGxhY2Vob2xkZXItYmcge1xuICBAZXh0ZW5kIC5kZW1vLWFuaW1hdGU7XG5cbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cblxuLyoqXG4gKiBDdXN0b20gb3ZlcnJpZGVzLlxuICovXG4jYXRvbXMtY3RhLXNlY29uZGFyeS13aGl0ZSB7XG4gIC5zZy1wYXR0ZXJuLWV4YW1wbGUge1xuICAgIEBleHRlbmQgLnBsYWNlaG9sZGVyLWJnO1xuICB9XG59XG5cbi5icmFuZC1wcmltYXJ5IHtcbiAgY29sb3I6ICMwNDYwYTk7XG59XG4iXX0= */

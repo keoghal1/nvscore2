@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "name": "Primary font",
+      "value": "'Sans pro Semibold';"
+    },
+    {
+      "name": "Primary font Italic",
+      "value": "'Sans Pro Semibold Italic';"
+    },
+    {
+      "name": "Primary font bold",
+      "value": "'Sans Pro Black';"
+    },
+    {
+      "name": "Secondary font Regular",
+      "value": "'Sans Pro Regular';"
+    },
+    {
+      "name": "Secondary font Italic",
+      "value": "'Sans Pro Regular Italic';"
+    },
+    {
+      "name": "Secondary font bold",
+      "value": "'Sans Pro Regular bold';"
+    }
+  ]
+}

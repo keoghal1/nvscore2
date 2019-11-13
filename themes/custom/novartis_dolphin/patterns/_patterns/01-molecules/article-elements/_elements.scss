@@ -1,0 +1,63 @@
+.field--name-field-expert {
+  font-size: calc-rem(16px);
+  font-family: type(sans, bold);
+  text-align: right;
+  @media #{$small} {
+    text-align: center;
+  }
+  a {
+    color: palette(text);
+    line-height: calc-rem(28px);
+  }
+}
+
+.field--name-field-tags  {
+  a {
+    @extend .hash-tag !optional;
+    font-family: type(sans);
+  }
+}
+
+.paragraph--type--image {
+  img {
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+  }
+}
+
+article,
+.field--name-field-expert {
+  .field--name-field-image,
+  .paragraph--type--video-content {
+    width: 100%;
+    margin-top: calc-rem(30px);
+    margin-bottom: calc-rem(30px);
+  }
+
+  .field--name-field-tags,
+  .field--name-field-curated-tags {
+    display: none;
+  }
+
+  ul {
+    list-style-type: disc;
+    @media #{$small} {
+      text-align: left;
+    }
+  }
+
+  ul,
+  ol {
+    padding: calc-rem(16px);
+  }
+
+  .field--name-field-image-url,
+  .field--name-field-image-title {
+    display: none;
+  }
+}
+
+.field--type-boolean {
+  display: none;
+}

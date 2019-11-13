@@ -1,0 +1,219 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["views-element-container" ,"col-auto"]
+    }
+  },
+  "children": {
+    "join()": [{
+      "include()": {
+        "pattern": "molecules-views-view--acquia-search",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["search-results-content"]
+            }
+          },
+          "title": null,
+          "rows": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-views-view-unformatted--acquia-search--page",
+                "with": {
+                  "title": null,
+                  "rows": [{
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["views-row"]
+                      }
+                    },
+                    "url": "http://www.google.com",
+                    "content": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "molecules-views-view-fields--acquia-search--page",
+                          "with": {
+                            "fields": [{
+                              "content": {
+                                "join()": [{
+                                  "include()": {
+                                    "pattern": "atoms-media",
+                                    "with": {
+                                      "content": {
+                                        "join()": [{
+                                          "include()": {
+                                            "pattern": "atoms-image",
+                                            "with": {
+                                              "img_src": "http://via.placeholder.com/270x270",
+                                              "img_alt": "alt text"
+                                            }
+                                          }
+                                        }]
+                                      }
+                                    }
+                                  }
+                                }]
+                              }
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-content-type"]
+                                }
+                              },
+                              "content": "Experts"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-title"]
+                                }
+                              },
+                              "content": "What is Lorem Ipsum?"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-excerpt"]
+                                }
+                              },
+                              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+                            }]
+                          }
+                        }
+                      }]
+                    }
+                  }, {
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["views-row"]
+                      }
+                    },
+                    "url": "http://www.google.com",
+                    "content": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "molecules-views-view-fields--acquia-search--page",
+                          "with": {
+                            "fields": [{
+                              "content": {
+                                "join()": [{
+                                  "include()": {
+                                    "pattern": "atoms-media",
+                                    "with": {
+                                      "content": {
+                                        "join()": [{
+                                          "include()": {
+                                            "pattern": "atoms-image",
+                                            "with": {
+                                              "img_src": "http://via.placeholder.com/270x270",
+                                              "img_alt": "alt text"
+                                            }
+                                          }
+                                        }]
+                                      }
+                                    }
+                                  }
+                                }]
+                              }
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-content-type"]
+                                }
+                              },
+                              "content": "Experts"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-title"]
+                                }
+                              },
+                              "content": "What is Lorem Ipsum?"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-excerpt"]
+                                }
+                              },
+                              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+                            }]
+                          }
+                        }
+                      }]
+                    }
+                  }, {
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["views-row"]
+                      }
+                    },
+                    "url": "http://www.google.com",
+                    "content": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "molecules-views-view-fields--acquia-search--page",
+                          "with": {
+                            "fields": [{
+                              "content": {
+                                "join()": [{
+                                  "include()": {
+                                    "pattern": "atoms-media",
+                                    "with": {
+                                      "content": {
+                                        "join()": [{
+                                          "include()": {
+                                            "pattern": "atoms-image",
+                                            "with": {
+                                              "img_src": "http://via.placeholder.com/270x270",
+                                              "img_alt": "alt text"
+                                            }
+                                          }
+                                        }]
+                                      }
+                                    }
+                                  }
+                                }]
+                              }
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-content-type"]
+                                }
+                              },
+                              "content": "Experts"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-title"]
+                                }
+                              },
+                              "content": "What is Lorem Ipsum?"
+                            }, {
+                              "element_type": "div",
+                              "element_attributes": {
+                                "Attribute()": {
+                                  "class": ["field-content", "search-excerpt"]
+                                }
+                              },
+                              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+                            }]
+                          }
+                        }
+                      }]
+                    }
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    }]
+  }
+}

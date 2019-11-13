@@ -1,0 +1,49 @@
+
+[class^="maps-icon-"], [class*=" maps-icon-"], .faa {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon maps',sans-serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: calc-rem(40px);
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  &:before {
+    font-weight: normal;
+  }
+  &.icons--blue {
+    &:before {
+      color: #0460a9;
+    }
+  }
+}
+
+.maps-icon-link:before {
+  content: "\e807";
+}
+.maps-icon-email:before {
+  content: "\e808";
+}
+.maps-icon-chevron:before {
+  content: "\e804";
+}
+.maps-icon-close:before {
+  content: "\e800";
+  color: #fff;
+}
+.maps-icon-new-window:before {
+  content: "\e801";
+  color: #fff;
+}
+.maps-icon-phone:before {
+  content: "\e802";
+  color: #979797;
+}
+.maps-icon-time:before {
+  content: "\e803";
+}

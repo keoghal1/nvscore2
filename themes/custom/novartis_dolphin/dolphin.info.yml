@@ -1,0 +1,42 @@
+name: Novartis Dolphin
+type: theme
+description: Dolphin theme for Novartis
+core: 8.x
+base theme: bootstrap_barrio
+
+
+libraries:
+  - dolphin/bootstrap
+
+
+regions:
+  header_top: 'Header Top'
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  mobile_header: 'Mobile Header'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  breadcrumb: 'Breadcrumb'
+  banner: 'Banner'
+  pre_content: 'Pre Content'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  content_bottom: 'Content Bottom'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  livechat: 'Live Chat buttons'
+  modal: 'Modal'
+component-libraries:
+  atoms:
+    paths:
+      - patterns/_patterns/00-atoms
+  molecules:
+    paths:
+      - patterns/_patterns/01-molecules
+  organism:
+    paths:
+      - patterns/_patterns/02-organism
+  pages:
+    paths:
+      - patterns/_patterns/04-pages

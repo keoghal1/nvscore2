@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["textfield", "form-text"],
+      "id": "edit-search",
+      "type": "text",
+      "required": "required",
+      "placeholder": "Textfield"
+    }
+  },
+  "children": null
+}

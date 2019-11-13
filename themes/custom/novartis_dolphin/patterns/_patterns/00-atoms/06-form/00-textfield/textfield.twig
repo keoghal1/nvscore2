@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{% if attributes.storage['aria-label'] | render != null %}
+    {% set attributes = attributes.setAttribute('aria-label', attributes.storage['aria-label'] | render ) %}
+{% else %}
+    {% set attributes = attributes.setAttribute('aria-label', element['#title'] ) %}
+{% endif%}
+{% if element['#name'] == 'search' %}
+  <input {{ attributes.addClass(header_search_text_color) }}/>{{ children }}
+  <span class="form-item-search-icon"><input type="submit" value="{{ element['#title'] }}" /></span>
+  <div class="wrapper-search-text {{ header_search_opacity }} {{ header_search_background_color }} {{ header_search_border_color }}" >
+  </div>
+{% else %}
+  <input {{ attributes }} />{{ children }}
+  {% if 'search-location' in element["#attributes"]['id'] %}
+    <span class="delete-search"></span>
+    <span class="search-map"></span>
+  {% endif %}
+{% endif %}
+

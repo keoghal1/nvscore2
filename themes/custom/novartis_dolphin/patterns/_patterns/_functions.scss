@@ -1,0 +1,20 @@
+/*//////////////////////////////////////
+//  Functions
+//////////////////////////////////////*/
+
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function type($font, $weight: 'regular') {
+  @return map-get(map-get($fontStack, $font), $weight);
+}
+
+@function calc-rem($size) {
+  $remSize: $size / $body-font-size;
+  @return #{$remSize}rem;
+}
+
+@function opac-rgba($color, $alpha: 0) {
+  @return unquote("rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})");
+}

@@ -1,0 +1,38 @@
+{
+  "current": 1,
+  "items": {
+    "previous": {
+      "attributes": {
+        "Attribute()": {
+          "class": "page-link"
+        }
+      }
+    },
+    "pages": [{
+      "attributes": {
+        "Attribute()": {
+          "class": "page-link"
+        }
+      }
+    },{
+      "attributes": {
+        "Attribute()": {
+          "class": "page-link"
+        }
+      }
+    }, {
+      "attributes": {
+        "Attribute()": {
+          "class": "page-link"
+        }
+      }
+    }],
+    "next": {
+      "attributes": {
+        "Attribute()": {
+          "class": "page-link"
+        }
+      }
+    }
+  }
+}

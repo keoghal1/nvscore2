@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "name": "Brand Primary",
+      "value": "#0460a9"
+    },
+    {
+      "name": "Brand Primary Light",
+      "value": "#5092c7"
+    },
+    {
+      "name": "Brand Secondary",
+      "value": "#40c6c6"
+    },
+    {
+      "name": "Brand Secondary Light",
+      "value": "#85e4e4"
+    },
+    {
+      "name": "Brand Accent",
+      "value": "#ff34bb"
+    },
+    {
+      "name": "Brand Accent Light",
+      "value": "#ff86d7"
+    },
+    {
+      "name": "White",
+      "value": "#ffffff"
+    },
+    {
+      "name": "Black",
+      "value": "#000000"
+    },
+    {
+      "name": "Neutral Dark Grey",
+      "value": "#283138"
+    },
+    {
+      "name": "Neutral Light Grey",
+      "value": "#929292"
+    },
+    {
+      "name": "Utility Positive",
+      "value": "#2ecc71"
+    },
+    {
+      "name": "Utility Caution",
+      "value": "#f1c40f"
+    },
+    {
+      "name": "Utility Positive Light",
+      "value": "#d5f5e3"
+    },
+    {
+      "name": "Utility Caution Light",
+      "value": "#fcf3cf"
+    },
+    {
+      "name": "Utility Neutral",
+      "value": "#9b9b9b"
+    },
+    {
+      "name": "Utility Negative Light",
+      "value": "#f5b7b1"
+    },
+    {
+      "name": "Utility Neutral Light",
+      "value": "#ebebeb"
+    },
+    {
+      "name": "Very Light Pink",
+      "value": "#e3e3e3"
+    },
+    {
+      "name": "Utility Negative",
+      "value": "#e74c3c"
+    },
+    {
+      "name": "Button link blue" ,
+      "value": "#0077b9"
+    }
+  ]
+}

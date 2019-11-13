@@ -1,0 +1,15 @@
+.form-item {
+  > label {
+    font-size: calc-rem(16px);
+  }
+  .description {
+    color: palette(text);
+    font-size: calc-rem(16px);
+  }
+}
+.form-item--error-message + div.checkbox-container {
+  margin-top: 0;
+}
+.form-check {
+  padding-left: 0;
+}

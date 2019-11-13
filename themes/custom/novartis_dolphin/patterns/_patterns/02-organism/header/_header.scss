@@ -1,0 +1,419 @@
+header {
+  position: relative;
+  z-index: 1;
+  &.scroll--overlay {
+    .post-interaction-logo {
+      display: none !important;
+    }
+    .pre-interaction-logo {
+      display: block !important;
+    }
+  }
+  @media #{$tablet-max} {
+    &.scroll--overlay.height--fixed {
+      .post-interaction-logo {
+        display: block !important;
+      }
+      .pre-logo {
+        display: none !important;
+      }
+    }
+  }
+  &.header-overlay {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    &.affix--fixed {
+      margin-top: 0;
+    }
+  }
+  .post-interaction-logo {
+    display: none;
+  }
+}
+#main-wrapper {
+  &.header-overlay {
+    padding-top: 0;
+    margin: 0;
+  }
+  .node__content {
+    margin: 0;
+  }
+  .paragraph--type--banner {
+    padding-bottom: calc-rem(60px);
+    @media #{$tablet} {
+      padding-bottom: calc-rem(60px);
+    }
+    @media #{$desktop} {
+      padding-bottom: calc-rem(42px);
+    }
+    @media #{$wide} {
+      padding-bottom: calc-rem(55px);
+    }
+    &.is-scroll {
+      padding-top: 0;
+      position: relative;
+    }
+
+    &.center {
+      text-align: center;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+    /* For scroll button (No text-decoration should be there)*/
+    a[data-banner-scroll-target] {
+      text-decoration: none !important;
+    }
+  }
+  .region-banner {
+    .node--type-expert {
+      padding: 0 0 calc-rem(60px);
+      @media #{$tablet} {
+        padding-bottom: calc-rem(50px);
+      }
+      @media #{$desktop} {
+        padding-top: calc-rem(19px);
+        padding-bottom: calc-rem(35px);
+      }
+      @media #{$wide} {
+        padding-top: calc-rem(49px);
+        padding-bottom: calc-rem(80px);
+      }
+      .field--name-field-image {
+        @media #{$tablet-max} {
+          margin-top: 0;
+        }
+      }
+    }
+
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  article.node--type-landing-page {
+    header {
+      padding: 0;
+    }
+  }
+}
+
+.header--elements {
+  &.brand-primary  {
+    &:after {
+      background: palette(brand-primary);
+    }
+  }
+  &.brand-primary-light {
+    &:after {
+      background: palette(brand-primary-light);
+    }
+  }
+  &.brand-secondary {
+    &:after {
+      background: palette(brand-secondary);
+    }
+  }
+  &.brand-secondary-light {
+    &:after {
+      background: palette(brand-secondary-light);
+    }
+  }
+  &.brand-accent {
+    &:after {
+      background: palette(brand-accent);
+    }
+  }
+  &.brand-accent-light {
+    &:after {
+      background: palette(brand-accent-light);
+    }
+  }
+  &.white {
+    &:after {
+      background: palette(white);
+    }
+  }
+  &.neutral-dark-grey {
+    &:after {
+      background: palette(neutral-dark-grey);
+    }
+  }
+  &.neutral-light-grey {
+    &:after {
+      background: palette(neutral-light-grey);
+    }
+  }
+  &.black {
+    &:after {
+      background: palette(black);
+    }
+  }
+  &.utility-positive {
+    &:after {
+      background: palette(utility-positive);
+    }
+  }
+  &.utility-positive-light {
+    &:after {
+      background: palette(utility-positive-light);
+    }
+  }
+  &.utility-negative {
+    &:after {
+      background: palette(utility-negative);
+    }
+  }
+  &.utility-negative-light {
+    &:after {
+      background: palette(utility-negative-light);
+    }
+  }
+  &.utility-caution {
+    &:after {
+      background: palette(utility-caution);
+    }
+  }
+  &.utility-caution-light {
+    &:after {
+      background: palette(utility-caution-light);
+    }
+  }
+  &.utility-neutral-light {
+    &:after {
+      background: palette(utility-neutral-light);
+    }
+  }
+  &.very-light-pink {
+    &:after {
+      background: palette(brand-primary-light);
+    }
+  }
+  &.utility-neutral {
+    &:after {
+      background: palette(utility-neutral);
+    }
+  }
+  &.neutral-black {
+    &:after {
+      background: palette(black);
+    }
+  }
+  &.neutral-white {
+    &:after {
+      background: palette(white);
+    }
+  }
+  &.brand-tertiary {
+    &:after {
+      background: palette(brand-tertiary);
+    }
+  }
+  &.brand-tertiary-light {
+    &:after {
+      background: palette(brand-tertiary-light);
+    }
+  }
+  &.brand-quaternary {
+    &:after {
+      background: palette(brand-quaternary);
+    }
+  }
+  &.brand-quaternary-light {
+    &:after {
+      background: palette(brand-quaternary-light);
+    }
+  }
+  &.brand-quinary {
+    &:after {
+      background: palette(brand-quinary);
+    }
+  }
+  &.brand-quinary-light {
+    &:after {
+      background: palette(brand-quinary-light);
+    }
+  }
+  &.utility-nav-opacity-1 {
+    &:after {
+      opacity: 0.1;
+    }
+  }
+  &.utility-nav-opacity-2 {
+    &:after {
+      opacity: 0.2;
+    }
+  }
+  &.utility-nav-opacity-3 {
+    &:after {
+      opacity: 0.3;
+    }
+
+  }
+  &.utility-nav-opacity-4 {
+    &:after {
+      opacity: 0.4;
+    }
+  }
+  &.utility-nav-opacity-5 {
+    &:after {
+      opacity: 0.5;
+    }
+  }
+  &.utility-nav-opacity-6 {
+    &:after {
+      opacity: 0.6;
+    }
+  }
+  &.utility-nav-opacity-7 {
+    &:after {
+      opacity: 0.7;
+    }
+  }
+  &.utility-nav-opacity-8 {
+    &:after {
+      opacity: 0.8;
+    }
+  }
+  &.utility-nav-opacity-9 {
+    &:after {
+      opacity: 0.9;
+    }
+  }
+  &.utility-nav-opacity-10 {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &.desktop-post-brand-primary {
+    &:after {
+      background: palette(brand-primary);
+    }
+  }
+  &.desktop-post-brand-primary-light {
+    &:after {
+      background: palette(brand-primary-light);
+    }
+  }
+  &.desktop-post-brand-secondary {
+    &:after {
+      background: palette(brand-secondary);
+    }
+  }
+  &.desktop-post-brand-secondary-light {
+    &:after {
+      background: palette(brand-secondary-light);
+    }
+  }
+  &.desktop-post-brand-accent {
+    &:after {
+      background: palette(brand-accent);
+    }
+  }
+  &.desktop-post-brand-accent-light {
+    &:after {
+      background: palette(brand-accent-light);
+    }
+  }
+  &.desktop-post-neutral-dark-grey {
+    &:after {
+      background: palette(neutral-dark-grey);
+    }
+  }
+  &.desktop-post-neutral-white {
+    &:after {
+      background: palette(white);
+    }
+  }
+  &.desktop-post-neutral-black {
+    &:after {
+      background: palette(black);
+    }
+  }
+  &.desktop-post-neutral-light-grey {
+    &:after {
+      background: palette(neutral-light-grey);
+    }
+  }
+  &.desktop-post-utility-positive {
+    &:after {
+      background: palette(utility-positive);
+    }
+  }
+  &.desktop-post-utility-positive-light {
+    &:after {
+      background: palette(utility-positive-light);
+    }
+  }
+  &.desktop-post-utility-negative {
+    &:after {
+      background: palette(utility-negative);
+    }
+  }
+  &.desktop-post-utility-negative-light {
+    &:after {
+      background: palette(utility-negative-light);
+    }
+  }
+  &.desktop-post-utility-caution {
+    &:after {
+      background: palette(utility-caution);
+    }
+  }
+  &.desktop-post-utility-caution-light {
+    &:after {
+      background: palette(utility-caution-light);
+    }
+  }
+  &.desktop-post-utility-neutral-light {
+    &:after {
+      background: palette(utility-neutral-light);
+    }
+  }
+  &.desktop-post-very-light-pink {
+    &:after {
+      background: palette(brand-primary-light);
+    }
+  }
+  &.desktop-post-utility-neutral {
+    &:after {
+      background: palette(utility-neutral);
+    }
+  }
+  &.desktop-post-brand-tertiary {
+    &:after {
+      background: palette(brand-tertiary);
+    }
+  }
+  &.desktop-post-brand-tertiary-light {
+    &:after {
+      background: palette(brand-tertiary-light);
+    }
+  }
+  &.desktop-post-brand-quaternary {
+    &:after {
+      background: palette(brand-quaternary);
+    }
+  }
+  &.desktop-post-brand-quaternary-light {
+    &:after {
+      background: palette(brand-quaternary-light);
+    }
+  }
+  &.desktop-post-brand-quinary {
+    &:after {
+      background: palette(brand-quinary);
+    }
+  }
+  &.desktop-post-brand-quinary-light {
+    &:after {
+      background: palette(brand-quinary-light);
+    }
+  }
+}

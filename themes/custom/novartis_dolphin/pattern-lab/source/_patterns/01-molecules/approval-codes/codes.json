@@ -1,0 +1,9 @@
+{
+  "items": [{  
+    "name": "approval-code",
+    "value": "Approval"
+  },{
+  "name": "disclaimer-text",
+  "value": "Disclaimer"
+  }]
+}

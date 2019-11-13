@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'curated--tags'
+  ]
+%}
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+    {% block label %}
+      {% if label %}
+        <div class="curated--title">{{ label }}</div>
+      {% endif %}
+    {% endblock label %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "id": "edit-submit-acquia-search",
+      "type": "submit",
+      "required": "required"
+    }
+  },
+  "children": null
+}

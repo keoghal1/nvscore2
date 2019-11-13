@@ -1,0 +1,18 @@
+{
+  "items": [{  
+    "name": "icon-insta-white",
+    "value": "icon-insta-white"
+  },{  
+    "name": "icon-fb-white",
+    "value": "icon-fb-white"
+  },{
+    "name": "icon-youtube-white",
+    "value": "icon-youtube-white"
+  },{
+    "name": "icon-twitter-white",
+    "value": "icon-twitter-white"
+  },{
+    "name": "icon-arrow--next-white",
+    "value": "icon-arrow--next-white"
+  }]
+}

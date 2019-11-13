@@ -1,0 +1,37 @@
+.menu--legal {
+  margin: auto !important;
+  padding: calc-rem(30px) 0 !important;
+  @media #{$desktop} {
+    padding: calc-rem(25px) 0 !important;
+  }
+
+  ul {
+    display: block;
+    text-align: center;
+  }
+
+  li.nav-item {
+    display: inline-block;
+    width: auto;
+
+    @media #{$mobile} {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+a.simple--nav,
+span.simple--nav {
+  font-family: type(sans, bold);
+  font-size: calc-rem(13px);
+  color: inherit;
+  padding: 0;
+  margin-right: calc-rem(15px);
+  margin-left: calc-rem(15px);
+  font-weight: 900;
+  &:hover {
+    transition: 0.3s;
+  }
+}

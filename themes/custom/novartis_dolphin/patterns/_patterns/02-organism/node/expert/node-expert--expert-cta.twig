@@ -1,0 +1,34 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<a title="{{ node.cta_anchor_title }}" href="{{ url }}">
+  <article{{ attributes.addClass(classes)}}>
+    <div class="cta--expert">
+        <div class="image">
+            {{ content.field_image }}
+            <span class="expert-gradient"></span>
+        </div>
+        <div class="desc">
+          <h3>
+            {{ node.title.value}}
+          </h3>
+          <div class="qualification">
+            {{ content.field_expert_job.0 }}
+          </div>
+          {% if node.cta_read_more_text %}
+            <div class='read-more'>
+              {{ node.cta_read_more_text }}
+            </div>
+          {% endif %}
+        </div>
+    </div>
+  </article>
+</a>
