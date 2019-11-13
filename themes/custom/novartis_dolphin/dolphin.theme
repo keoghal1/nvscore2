@@ -1,0 +1,629 @@
+<?php
+
+/**
+ * @file
+ * Theme specific functionality.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Component\Utility\Unicode;
+
+/**
+ * Helper function to create classes for a button from the given button type.
+ *
+ * @param string $button_type
+ *   Type of button.
+ * @param array $button_classes
+ *   An array of initial button classes.
+ *
+ * @return array
+ *   Returns an array of classes to be applied on a button.
+ */
+function _dolphin_prepare_button_classes($button_type, array $button_classes) {
+
+  if (!in_array('button', $button_classes)) {
+    $button_classes[] = 'button';
+  }
+  $button_classes[] = 'button--' . $button_type;
+
+  // Add background color class for the button.
+  $button_background = theme_get_setting('dolphin_' . $button_type . '_button_background_color');
+  $button_classes[] = $button_background;
+
+  // Add border color class for the button.
+  $button_border = theme_get_setting('dolphin_' . $button_type . '_button_border_color');
+  $button_classes[] = $button_border;
+
+  // Add width class for the button.
+  $button_border_width = theme_get_setting('dolphin_' . $button_type . '_button_border_width');
+  $button_classes[] = $button_border_width;
+
+  // Add text color class for the button.
+  $button_text_color = theme_get_setting('dolphin_' . $button_type . '_button_text_color');
+  $button_classes[] = $button_text_color;
+
+  return $button_classes;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function dolphin_preprocess_page(&$variables) {
+  $variables['is_sticky_header'] = theme_get_setting('novartis_dolphin_sticky_header');
+  $variables['color_scheme'] = theme_get_setting('novartis_dolphin_header_color');
+  $variables['#attached']['drupalSettings']['pre_color_scheme'] = theme_get_setting('novartis_dolphin_header_color');
+  $variables['pre_interaction_background'] = theme_get_setting('novartis_dolphin_header_background_color');
+  $variables['#attached']['drupalSettings']['post_color_scheme'] = theme_get_setting('novartis_dolphin_header_color_post');
+  $variables['#attached']['drupalSettings']['postBackgroundHeader'] = theme_get_setting('novartis_dolphin_header_background_color_post');
+  // Variables for utility nav.
+  $variables['utility_nav_pre_interaction_background'] = theme_get_setting('novartis_dolphin_utility_nav_background_color_pre');
+  $variables['#attached']['drupalSettings']['utility_nav_post_interaction_background'] = theme_get_setting('novartis_dolphin_utility_nav_background_color_post');
+  $variables['utility_nav_pre_color_scheme'] = theme_get_setting('utility_nav_pre_color_scheme');
+  $variables['utility_nav_opacity'] = 'utility-nav-' . theme_get_setting('utility_nav_opacity');
+  $variables['#attached']['drupalSettings']['utitlity_nav_pre_color_scheme'] = $variables['utility_nav_pre_color_scheme'];
+  $variables['#attached']['drupalSettings']['utility_nav_post_color_scheme'] = theme_get_setting('utility_nav_post_color_scheme');
+  // Use this variable to show/hide novartis logo on the footer.
+  $variables['logo_footer'] = \Drupal::config('system.site')->get('novartis_footer_logo');
+  $button_type_primary = 'primary';
+  $button_type_secondary = 'secondary';
+  $button_type_tertiary = 'tertiary';
+  $set_nav_top = 'set_nav_top';
+  $variables['#attached']['drupalSettings']['button_classes_primary'] = _dolphin_prepare_button_classes($button_type_primary, []);
+  $variables['#attached']['drupalSettings']['button_classes_secondary'] = _dolphin_prepare_button_classes($button_type_secondary, []);
+  $variables['#attached']['drupalSettings']['button_classes_tertiary'] = _dolphin_prepare_button_classes($button_type_tertiary, []);
+  if (empty($variables['page']['primary_menu'])) {
+    $variables['set_nav_top'] = $set_nav_top;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dolphin_preprocess_paragraph__content_container(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $color_theme = $paragraph->get('field_text_color')->getValue();
+  $color_theme = array_shift($color_theme);
+  $variables['content_container_bg_color'] = theme_get_setting('novartis_dolphin_content_bg_color_' . $color_theme['value']) ?? theme_get_setting('novartis_dolphin_content_bg_color_default');
+  $variables['content_container_text_color'] = theme_get_setting('content-container-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--views-content.html.twig.
+ */
+function dolphin_preprocess_paragraph__views_content_block(&$variables) {
+  $variables['view_blocks_text_color'] = theme_get_setting('view-blocks-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block--system-menu-block.html.twig.
+ */
+function dolphin_preprocess_block__system_menu_block(&$variables) {
+  $variables['footer_nav_title_color'] = 'text-' . theme_get_setting('footer_nav_title_color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--linked-teaser.html.twig.
+ */
+function dolphin_preprocess_paragraph__linked_teaser(&$variables) {
+  $variables['page_content_block_text_color'] = theme_get_setting('page-content-block-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--banner.html.twig.
+ */
+function dolphin_preprocess_paragraph__banner(&$variables) {
+  $variables['banner_text_color'] = theme_get_setting('banner-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--hero-slider.html.twig.
+ */
+function dolphin_preprocess_paragraph__hero_slider(&$variables) {
+  $variables['hero_text_color'] = theme_get_setting('hero-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dolphin_preprocess_paragraph__video_content(&$variables) {
+  $variables['text_color'] = theme_get_setting('video-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dolphin_preprocess_paragraph__simple_text(&$variables) {
+  $variables['simple_text_color'] = theme_get_setting('simple-text-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dolphin_preprocess_paragraph__search_block(&$variables) {
+  $paragraph = $variables['paragraph'];
+
+  // Get text color field from content container.
+  if ($paragraph->getParentEntity()) {
+    $content_container = $paragraph->getParentEntity()->getParentEntity();
+  }
+  if ($content_container->hasField('field_text_color')) {
+    $color_theme = $content_container->get('field_text_color')->getString();
+    if ($color_theme && $color_theme != '_none') {
+      $theme_settings = dolphin_theme_get_variables('dolphin_search', $color_theme);
+      $variables['embedded_search'] = $theme_settings[$color_theme];
+      $variables['embedded_search']['border_radius'] = 'border-radius-' . $variables['embedded_search']['border_radius'];
+      $variables['embedded_search']['opacity'] = 'search-embed-' . $variables['embedded_search']['opacity'];
+      $variables['#attached']['drupalSettings']['search_text_color'] = $variables['embedded_search']['text_color'];
+      $variables['#attached']['drupalSettings']['search_background_color'] = $variables['embedded_search']['background_color'];
+      $variables['attributes']['class'] = $variables['embedded_search'];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function dolphin_preprocess_node__expert(&$variables) {
+  $variables['expert_text_color'] = theme_get_setting('expert-text-color');
+  $variables['expert_background_color'] = theme_get_setting('expert-background-color');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.html.twig.
+ */
+function dolphin_preprocess_paragraph(&$variables) {
+  // Add border-radius to image in image paragraph.
+  if (!empty($variables['elements']['field_image'])) {
+    $imageRadius = theme_get_setting('image-border-radius');
+    $variables['#attached']['drupalSettings']['imageRadius'] = $imageRadius;
+  }
+
+  // Add border-radius to views content block.
+  $variables['views_content_radius'] = theme_get_setting('paragraph-views-content-border-radius');
+  if (!empty($variables['views_content_radius'])) {
+    $variables['paragraph_views_content_radius'] = "border-radius: " . $variables['views_content_radius'] . 'px';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Pass block region value to content so this can be used in
+ * dolphin_theme_suggestions_menu_alter.
+ */
+function dolphin_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+  $variables['theme_color'] = theme_get_setting('novartis_dolphin_expertcta_color');
+  $variables['#attached']['drupalSettings']['novartisDolphinExpertcta'] = theme_get_setting('novartis_dolphin_expertcta');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function dolphin_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . 'menu' . '__' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu--menu--footer-first.html.twig.
+ */
+function dolphin_preprocess_menu__menu__footer_first(&$variables) {
+  $variables['footer_tier_one_social_legal_color'] = 'text-' . theme_get_setting('footer_tier_one_social_legal_color');
+  $variables['footer_tier_two_color'] = 'text-' . theme_get_setting('footer_tier_two_color');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dolphin_theme_suggestions_region_alter(&$suggestions, array $variables) {
+  // Retrieve an array which contains the path pieces.
+  $current_path = \Drupal::service('path.current')->getPath();
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    $current_node = $node->bundle();
+  }
+
+  $path_args = explode('/', $current_path);
+  if (in_array('search', $path_args) && in_array($variables['elements']['#region'], ['pre_content', 'content'])) {
+    $suggestions[] = 'region__container';
+  }
+  elseif ($node && (($current_node == 'article') && in_array($variables['elements']['#region'], ['pre_content', 'content']))) {
+    $suggestions[] = 'region__container';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dolphin_preprocess_views_view_fields__acquia_search__page(&$variables) {
+  $teaser_text = '';
+  if (isset($variables['fields']['field_teaser_description']) && is_object($variables['fields']['field_teaser_description']->content)) {
+    $teaser_text = trim(strip_tags($variables['fields']['field_teaser_description']->content->__toString()));
+  }
+  if (!empty($teaser_text)) {
+    unset($variables['fields']['field_body']);
+  }
+  unset($variables['fields']['nid']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dolphin_preprocess_field__paragraph__field_body__views_content_block(&$variables) {
+  $text = $variables['items'][0]['content']['#text'];
+  $count = strlen($text) - strlen(strip_tags($text)) + 50;
+  $string = Unicode::truncate($text, $count, TRUE, TRUE);
+  $variables['items'][0]['content']['#text'] = $string;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for form-element-label.html.twig.
+ */
+function dolphin_preprocess_form_element_label(&$variables) {
+  if (isset($variables['element']['#id'])) {
+    $id = preg_replace('/--\d+/', '', $variables['element']['#id']);
+    $route = \Drupal::routeMatch()->getRouteName();
+    switch ($id) {
+      case 'edit-search':
+      case 'edit-sort-by':
+        $variables['attributes']['class'][] = 'visually-hidden';
+        break;
+
+      case 'edit-password':
+        if ($route == 'protected_pages_login_page') {
+          $variables['attributes']['class'][] = 'text-theme-dark';
+        }
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_field().
+ */
+function dolphin_preprocess_views_view_field(&$variables) {
+  if ($variables['view']->id() == 'hero_slideshow' && $variables['field']->field == 'field_cta') {
+    $hero_slide_cta = $variables['row']->_relationship_entities['field_hero_slides']->get('field_cta')->getValue();
+    if (!empty($hero_slide_cta)) {
+      $link_values = array_pop($hero_slide_cta);
+
+      // Populate the classes here.
+      $button_type = _dolphin_get_button_type($link_values);
+      $variables['button_radius'] = theme_get_setting('dolphin_' . $button_type . '_button_border_radius');
+      if (count($link_values['options']['attributes']['class']) != 0) {
+        $button_classes = $link_values['options']['attributes']['class'];
+      }
+      else {
+        $button_classes = [];
+      }
+      $link_values['options']['attributes']['class'] = _dolphin_prepare_button_classes($button_type, $button_classes);
+      if (!empty($variables['button_radius'])) {
+        $link_values['options']['attributes']['style'] = "border-radius: " . $variables['button_radius'] . 'px';
+      }
+      $variables['row']->_relationship_entities['field_hero_slides']->set('field_cta', $link_values);
+
+      $variables['output'] = $variables['field']->advancedRender($variables['row']);
+    }
+  }
+  // When there is no color added from the hero slider paragraph level.
+  if ($variables['view']->id() == 'hero_slideshow' && $variables['field']->field == 'field_text_color' && $variables['output'] == '_none') {
+    $variables['output'] = theme_get_setting('hero-text-color');
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function dolphin_preprocess_field(&$variables) {
+  // If field type is link add button classes.
+  if ($variables['element']['#field_type'] == 'link') {
+
+    foreach ($variables['items'] as $key => $value) {
+
+      // If button type field is present.
+      if (!empty($variables['element'][$key]['#options']['button_type'])) {
+        $button_type = $variables['element'][$key]['#options']['button_type'];
+      }
+      else {
+        // If class passed in attributes section of cta.
+        $button_type = 'primary';
+        if (!empty($variables['element'][$key]['#options']['attributes']) && (count($variables['element'][$key]['#options']['attributes']) != 0)) {
+          $button_classes_list = $variables['element'][$key]['#options']['attributes']['class'];
+          foreach (['primary', 'secondary', 'tertiary'] as $class_value) {
+            if (in_array('button--' . $class_value, $button_classes_list)) {
+              $button_type = $class_value;
+            }
+          }
+        }
+      }
+
+      $variables['button_radius'] = theme_get_setting('dolphin_' . $button_type . '_button_border_radius');
+      if (!empty($variables['button_radius'])) {
+        $variables['border_radius'] = "border-radius: " . $variables['button_radius'] . 'px';
+      }
+
+      if (!empty($variables['element'][$key]['#options']['attributes']) && (count($variables['element'][$key]['#options']['attributes']) != 0)) {
+        $button_classes = $variables['element'][$key]['#options']['attributes']['class'];
+      }
+      else {
+        $button_classes = [];
+      }
+
+      $variables['items'][$key]['button_classes'] = implode(' ', _dolphin_prepare_button_classes($button_type, $button_classes));
+    }
+  }
+}
+
+/**
+ * A helper function to return button type from link values.
+ */
+function _dolphin_get_button_type($link_values) {
+  // If button type field is present.
+  if (!empty($link_values['options']['button_type'])) {
+    $button_type = $link_values['options']['button_type'];
+  }
+  else {
+    // If class passed in attributes section of cta.
+    $button_type = 'primary';
+    if (count($link_values['options']['attributes']) != 0) {
+      $button_classes_list = $link_values['options']['attributes']['class'];
+      foreach (['primary', 'secondary', 'tertiary'] as $class_value) {
+        if (in_array('button--' . $class_value, $button_classes_list)) {
+          $button_type = $class_value;
+        }
+      }
+    }
+  }
+
+  return $button_type;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dolphin_theme_suggestions_field_alter(&$suggestions, array $variables) {
+  $container_layouts = [
+    'layout_one_up',
+    'layout_two_up',
+    'layout_three_up',
+    'layout_four_up',
+  ];
+  if (in_array($variables['element']['#bundle'], $container_layouts)) {
+    $suggestions[] = 'field__container_layout';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for region.html.twig.
+ */
+function dolphin_preprocess_region(&$variables) {
+  $nowrap = [
+    'pre_content',
+    'banner',
+    'content_bottom',
+  ];
+  if (in_array($variables['elements']['#region'], $nowrap)) {
+    foreach ($variables['attributes']['class'] as $key => $value) {
+      if ($value == 'row') {
+        array_splice($variables['attributes']['class'], $key, 1);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for region__footer_second.html.twig.
+ */
+function dolphin_preprocess_region__footer_second(&$variables) {
+  $variables['footer_tier_one_social_legal_color'] = 'text-' . theme_get_setting('footer_tier_one_social_legal_color');
+}
+
+/**
+ * Implements hook_preprocess_input__textfield().
+ */
+function dolphin_preprocess_input__textfield(&$variables) {
+  $inputBorderRadius = theme_get_setting('input-border-radius');
+  $variables['#attached']['drupalSettings']['inputBorderRadius'] = $inputBorderRadius;
+  if (isset($variables['element']['#id'])) {
+    $id = preg_replace('/--\d+/', '', $variables['element']['#id']);
+    if ($id == 'edit-search') {
+      $variables['header_search_background_color'] = 'search-' . theme_get_setting('header_search_background_color');
+      $variables['header_search_border_color'] = 'search-border-' . theme_get_setting('header_search_border_color');
+      $variables['header_search_opacity'] = 'search-' . theme_get_setting('header_search_opacity');
+      $variables['header_search_text_color'] = 'search-' . theme_get_setting('header_search_text_color');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function dolphin_preprocess_select(&$variables) {
+  $dropdownBorderRadius = theme_get_setting('dropdown-border-radius');
+  $variables['#attached']['drupalSettings']['dropdownBorderRadius'] = $dropdownBorderRadius;
+  // Change select2 element placeholder text.
+  if ($variables['element']['#type'] == 'select2' && $variables['element']['#name'] == 'Categories') {
+    $settings = $variables['element']['#attributes']['data-select2-config'];
+    $settings = Json::decode($settings);
+    $settings['placeholder'] = new TranslatableMarkup('All categories');
+    $variables['element']['#attributes']['data-select2-config'] = Json::encode($settings);
+    $variables['attributes']['data-select2-config'] = Json::encode($settings);
+    $variables['#attached']['library'][] = 'novartis_dolphin_search/novartis_dolphin_search_select2';
+  }
+}
+
+/**
+ * Implements hook_preprocess_input__submit().
+ */
+function dolphin_preprocess_input__submit(&$variables) {
+  $button_type = 'primary';
+  if (count($variables['element']['#attributes']) != 0) {
+    $button_classes_list = $variables['element']['#attributes']['class'];
+    foreach (['primary', 'secondary', 'tertiary'] as $class_value) {
+      if (in_array('button--' . $class_value, $button_classes_list)) {
+        $button_type = $class_value;
+      }
+    }
+  }
+  $variables['button_radius'] = theme_get_setting('dolphin_' . $button_type . '_button_border_radius');
+  if (!empty($variables['button_radius'])) {
+    $variables['border_radius'] = "border-radius: " . $variables['button_radius'] . 'px';
+  }
+
+  $variables['button_classes'] = _dolphin_prepare_button_classes($button_type, []);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dolphin_preprocess_views_view_unformatted__acquia_search__page(&$variables) {
+  foreach ($variables['rows'] as &$row) {
+    $nid = $row['content']['#row']->{"entity:node/nid"}[0];
+    $content_language = $row['content']['#row']->_item->getLanguage();
+    $default_language = \Drupal::service('language_manager')->getDefaultLanguage()->getId();
+    if ($nid) {
+      $row['url'] = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $nid, $row['content']['#row']->_item->getLanguage());
+      if ($content_language !== $default_language) {
+        $row['url'] = '/' . $content_language . $row['url'];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_eu_cookie_compliance_popup_info().
+ */
+function dolphin_preprocess_eu_cookie_compliance_popup_info(&$variables) {
+  $eu_cookie_compliance_config = \Drupal::config('eu_cookie_compliance.settings');
+  $variables['background_color'] = is_null($eu_cookie_compliance_config->get('eu_cookie_compliance_background_color')) ? 'brand-primary' : $eu_cookie_compliance_config->get('eu_cookie_compliance_background_color');
+  $variables['text_color'] = is_null($eu_cookie_compliance_config->get('eu_cookie_compliance_text_color')) ? 'text-theme-default' : $eu_cookie_compliance_config->get('eu_cookie_compliance_text_color');
+  $variables['button_type'] = is_null($eu_cookie_compliance_config->get('eu_cookie_compliance_button_type')) ? 'primary' : $eu_cookie_compliance_config->get('eu_cookie_compliance_button_type');
+
+  $button_type = $variables['button_type'];
+  $variables['button_radius'] = theme_get_setting('dolphin_' . $button_type . '_button_border_radius');
+  if (!empty($variables['button_radius'])) {
+    $variables['border_radius'] = "border-radius: " . $variables['button_radius'] . 'px';
+  }
+
+  $variables['button_classes'] = implode(' ', _dolphin_prepare_button_classes($button_type, [])) . ' ';
+}
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function dolphin_preprocess_image(&$variables) {
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('webp')) {
+    $variables['imageurlwebp'] = \Drupal::service('webp.webp')->getWebpFilename($variables['uri']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function dolphin_preprocess_html(&$variables) {
+  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
+  $direction = \Drupal::service('language_manager')->getCurrentLanguage()->getDirection();
+  $variables['#attached']['library'][] = $current_theme . '/' . $direction . '_styles';
+  $variables['#attached']['library'][] = $current_theme . '/' . 'color_' . $direction;
+}
+
+/**
+ * Implements hook_preprocess_menu_levels().
+ */
+function dolphin_preprocess_menu_levels__main__level_1(&$variables) {
+  $items = $variables['items'];
+  $first_item = reset($items);
+  $parent = explode(':', $first_item['original_link']->getParent());
+  $content = \Drupal::service('entity.repository')->loadEntityByUuid('menu_link_content', $parent[1]);
+  $variables['parentlink'] = $content->label();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function dolphin_theme_suggestions_webform_alter(&$suggestions, array $variables) {
+  if (isset($variables['element']['#quiz']) && $variables['element']['#quiz']) {
+    $suggestions[] = 'webform__quiz';
+  }
+}
+
+/**
+ * Function Description.
+ *
+ * This function can be reused in a way that wherever we have color
+ * variant(Dark, Default, light) options in dropdown
+ * we can call this function and pass color variant
+ * in $subtype(second paramter).
+ * And then inside switch case we can can provide the values associated
+ * to each color variant for example opacity, border_color, text_color
+ * with respect to the color variants passed
+ * in the $subtype(It can be dark, default or light).
+ * This function accepts case to be used as it's first parameter
+ * and color variant selected from the color variant
+ * options as the second parameter.
+ *
+ * @param string $type
+ *   Type of theme setting to retrieve.
+ * @param string $subtype
+ *   Any subtype to check.
+ *
+ * @return array
+ *   Theme settings to return.
+ */
+function dolphin_theme_get_variables($type = NULL, $subtype = NULL) {
+
+  $variables = [];
+  if ($type) {
+    switch ($type) {
+      case 'dolphin_search':
+        // Common for both dark and default so making it common.
+        $dark_default = [
+          'background_color' => 'dolphin_search_paragraph_default_dark_background_color',
+          'opacity' => 'dolphin_search_paragraph_default_dark_opacity',
+          'border_color' => 'dolphin_search_paragraph_default_dark_border_color',
+          'border_width' => 'dolphin_search_paragraph_default_dark_border_width',
+          'border_radius' => 'dolphin_search_paragraph_default_dark_border_radius',
+          'text_color' => 'dolphin_search_paragraph_default_dark_text_color',
+        ];
+        $variables = [
+          'text-theme-dark' => $dark_default,
+          'text-theme-default' => $dark_default,
+          'text-theme-light' => [
+            'background_color' => 'dolphin_search_paragraph_light_background_color',
+            'opacity' => 'dolphin_search_paragraph_light_opacity',
+            'border_color' => 'dolphin_search_paragraph_light_border_color',
+            'border_width' => 'dolphin_search_paragraph_light_border_width',
+            'border_radius' => 'dolphin_search_paragraph_light_border_radius',
+            'text_color' => 'dolphin_search_paragraph_light_text_color',
+          ],
+        ];
+        break;
+    }
+    // Checking subtype(Color variant) is available. If available then iterate.
+    if ($subtype && array_key_exists($subtype, $variables)) {
+      $subtypes = $variables[$subtype];
+      $variables = [];
+      $variables[$subtype] = $subtypes;
+    }
+
+    foreach ($variables as &$styles) {
+      foreach ($styles as &$style) {
+        $style = theme_get_setting($style);
+      }
+    }
+  }
+  return $variables;
+}

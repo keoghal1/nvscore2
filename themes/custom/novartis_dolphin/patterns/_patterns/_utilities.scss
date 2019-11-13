@@ -1,0 +1,25 @@
+// Alignment
+
+.text-align-center {
+	text-align: center;
+}
+.text-align-left {
+	text-align: left;
+}
+
+.affix--fixed {
+	position: relative;
+  margin-top: 1rem;
+	z-index: 1;
+}
+.alert-wrapper {
+  position: relative;
+  &.alert-message-slider {
+    margin-top: 100px;
+  }
+}
+.ui-widget {
+  &.ui-autocomplete {
+    font-size: calc-rem(16px);
+  }
+}

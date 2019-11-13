@@ -1,0 +1,18 @@
+{%
+  set classes = [
+    not data.banner_bg_color ? 'search-banner-bg-none' : data.banner_bg_color,
+    not data.banner_text_color ? 'text-theme-default' : data.banner_text_color,
+  ]
+%}
+{% if data.banner_title is not empty %}
+  <div class="novartis-dolphin-search-banner">
+    <div{{ attributes.addClass(classes) }}>
+      <div class="search-banner-content">
+        <h1 class="h1" dir="ltr">
+          {{ data.banner_title }}
+        </h1>
+        <div>{{ data.banner_subtitle }}</div>
+      </div>
+    </div>
+  </div>
+{% endif %}

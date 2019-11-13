@@ -1,0 +1,13 @@
+<ul class="sg-icons">
+  {% for item in items %}
+    <li>
+      <div class="sg-info">
+        <span class="{{item.value}} icons--blue"></span> <br/>
+        <code>Class Name:{{item.name}}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+{% if meta %}
+  <p> <small>{{ meta.description }}</small> </p>
+{% endif %}

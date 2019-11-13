@@ -1,0 +1,103 @@
+.ui-widget-content.external-link-warning {
+  width: 90% !important;
+  border: 0;
+  @media #{$wide} {
+    max-width: 780px !important;
+  }
+  padding: calc-rem(30px) calc-rem(30px) calc-rem(60px) calc-rem(30px);
+  position: relative;
+  .ui-widget-header {
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    top: 30px;
+    &:after {
+      display: block;
+      font-family: 'icomoon',sans-serif !important;
+      content: "\e90a";
+      position: absolute;
+      right: calc-rem(-20px);
+      top: calc-rem(-50px);
+      @media #{$desktop} {
+        right: 0;
+        top: -30px;
+      }
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .ui-dialog-titlebar-close {
+    right: 0;
+    left: 100%;
+    top: calc-rem(-40px);
+    @media #{$desktop} {
+      left: calc(100% - 20px);
+      top: -20px;
+    }
+    z-index: 9999;
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  .ui-dialog-content {
+    text-align: left;
+  }
+
+  &.text-theme-light {
+    .ui-widget-content {
+      color: palette(white);
+    }
+    .ui-widget-header {
+      &:after {
+        color: palette(white);
+      }
+    }
+  }
+  &.text-theme-default {
+    .ui-widget-content {
+      color: palette(neutral-dark-grey);
+    }
+    .ui-widget-header {
+      &:after {
+        color: palette(brand-accent);
+      }
+    }
+  }
+  &.text-theme-dark {
+    .ui-widget-content {
+      color: palette(black);
+    }
+    .ui-widget-header {
+      &:after {
+        color: palette(black);
+      }
+    }
+  }
+  .ui-dialog-buttonpane {
+    border: 0;
+    margin-top: calc-rem(10px);
+    padding: 0;
+    .ui-dialog-buttonset {
+      display: flex;
+      float: none;
+    }
+    .button {
+      margin-bottom: 0;
+      background-image: none;
+      outline: none;
+    }
+    .cancel-button {
+      max-width: calc-rem(160px);
+    }
+  }
+  .ui-widget-content {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+}

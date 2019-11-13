@@ -1,0 +1,47 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% if content|render|striptags|trim is not empty%}
+  <article{{ attributes.addClass(classes, expert_text_color, expert_background_color)}}>
+    <div class="row expert-container">
+      {% if field_image|render %}
+        <div class="col-sm-6 image-wrapper">
+          {% block image %}
+            {{ field_image }}
+          {% endblock %}
+          {% if credits %}
+            <div class="image--credit">
+              {{credit}}
+            </div>
+          {% endif %}
+        </div>
+        <div{{ content_attributes.addClass('node__content','content-wrapper','col-sm-6') }}>
+      {% else %}
+          <div{{ content_attributes.addClass('node__content','content-wrapper','col-sm-12') }}>
+      {% endif %}
+        <h1>{{ field_salutation.0 }} {{ field_first_name.0 }} {{ field_last_name.0 }}</h1>
+        {% if job|render %}
+          {% block job %}
+            {% if job %}
+              {% include '@atoms/07-elements/headings/heading.twig' with {
+                "heading_level": heading_level ?: 4,
+                "heading": job
+              } %}
+            {% endif %}
+          {% endblock job %}
+        {% endif %}
+        {% block content %}
+          {{ content|without('field_banner_title','field_salutation','field_first_name','field_last_name','field_expert_job','field_image','field_teaser_description') }}
+        {% endblock %}
+      </div>
+    </div>
+  </article>
+{% endif %}

@@ -1,0 +1,8 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["js-form-wrapper"]
+    }
+  },
+  "children": "text comes here"
+}

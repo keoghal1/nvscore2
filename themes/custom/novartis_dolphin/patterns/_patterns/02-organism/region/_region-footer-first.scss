@@ -1,0 +1,318 @@
+.region-footer-bottom {
+  width: 100% !important;
+  clear: both;
+  text-align: center;
+}
+.site-footer {
+  @media #{$desktop} {
+    padding: calc-rem(62px) 0 calc-rem(13px);
+  }
+}
+.site-footer__first {
+  @media #{$desktop} {
+    background-image: none;
+  }
+  .container {
+    padding: 0 calc-rem(15px);
+  }
+}
+.region-footer-first {
+  font-family: type(sans);
+  line-height: 1;
+  padding: calc-rem(32px) 0;
+  @media #{$desktop} {
+    display: flex;
+    width: auto;
+    padding: calc-rem(6px) 0 calc-rem(6px);
+  }
+  h2 {
+    font-size: calc-rem(13px);
+    line-height: 1;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: calc-rem(55px);
+    margin-bottom: calc-rem(5px);
+    @media #{$desktop} {
+      padding-bottom: calc-rem(38px);
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .block-menu {
+    margin: 0;
+    padding: 0;
+    border: none;
+    @media #{$desktop} {
+      flex-grow: 1;
+      flex-basis: calc(25% - (2 * #{calc-rem(15px)}));
+      padding: 0 calc-rem(15px);
+    }
+    > h2.sr-only ~ ul.nav {
+      @media #{$desktop} {
+        padding-top: calc-rem(51px);
+      }
+    }
+  }
+  ul.nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media #{$desktop} {
+      text-align: left;
+    }
+    a,
+    span {
+      padding: 0;
+    }
+    a.nav-link {
+      display: block;
+    }
+    > li {
+      border-bottom: 1px solid opac-rgba(#ffffff, 0.2);
+      position: relative;
+      &:before {
+        content: '';
+      }
+      @media #{$desktop} {
+        padding-bottom: calc-rem(25px);
+        border-bottom: none;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      > .icon-button {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        @media #{$desktop} {
+          display: none;
+        }
+      }
+      a.view-more {
+        display: none;
+        @media #{$desktop} {
+          display: block;
+          font-size: calc-rem(13px);
+          color: palette(brand-accent);
+          font-family: type(sans, bold);
+          font-weight: normal;
+          &:hover {
+            color: palette(brand-accent-light);
+          }
+        }
+      }
+      > a,
+      > span {
+        font-size: calc-rem(13px);
+        padding: calc-rem(15px) 0 0;
+        font-weight: 900;
+        position: relative;
+        z-index: 1;
+        font-family: type(sans, bold);
+        @media #{$desktop} {
+          position: static;
+          font-size: calc-rem(14px);
+          font-family: type(sans, bold);
+          padding: 0 0 calc-rem(9px);
+          font-weight: normal;
+        }
+      }
+    }
+    .menu {
+      display: none;
+      @media #{$desktop} {
+        display: block;
+        font-size: calc-rem(13px);
+      }
+      > li {
+        padding-bottom: calc-rem(9px);
+      }
+    }
+  }
+}
+
+
+footer {
+  .text-brand-primary  {
+    color: palette(brand-primary);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-primary);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-primary-light);
+        &:before {
+          color: palette(brand-primary-light);
+        }
+      }
+    }
+  }
+  .text-brand-primary-light {
+    color: palette(brand-primary-light);
+  }
+  .text-brand-secondary {
+    color: palette(brand-secondary);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-secondary);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-secondary-light);
+        &:before {
+          color: palette(brand-secondary-light);
+        }
+      }
+    }
+  }
+  .text-brand-secondary-light {
+    color: palette(brand-secondary-light);
+  }
+  .text-brand-accent {
+    color: palette(brand-accent);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-accent);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-accent-light);
+        &:before {
+          color: palette(brand-accent-light);
+        }
+      }
+    }
+  }
+  .text-brand-accent-light {
+    color: palette(brand-accent-light);
+  }
+  .text-brand-tertiary {
+    color: palette(brand-tertiary);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-tertiary);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-tertiary-light);
+        &:before {
+          color: palette(brand-tertiary-light);
+        }
+      }
+    }
+  }
+  .text-brand-tertiary-light {
+    color: palette(brand-tertiary-light);
+  }
+  .text-brand-quaternary {
+    color: palette(brand-quaternary);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-quaternary);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-quaternary-light);
+        &:before {
+          color: palette(brand-quaternary-light);
+        }
+      }
+    }
+  }
+  .text-brand-quaternary-light {
+    color: palette(brand-quaternary-light);
+  }
+  .text-brand-quinary {
+    color: palette(brand-quinary);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(brand-quinary);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(brand-quinary-light);
+        &:before {
+          color: palette(brand-quinary-light);
+        }
+      }
+    }
+  }
+  .text-brand-quinary-light {
+    color: palette(brand-quinary-light);
+  }
+  .text-neutral-black {
+    color: palette(black);
+    .fa,
+    a,
+    &.menu a {
+      color: palette(black);
+      &:before {
+        color: palette(black);
+      }
+    }
+  }
+  .text-neutral-white {
+    color: palette(white);
+    .fa,
+    a,
+    &.menu a {
+      color: palette(white);
+      &:before {
+        color: palette(white);
+      }
+    }
+  }
+  .text-neutral-dark-grey {
+    color: palette(neutral-dark-grey);
+    .fa:before,
+    &.menu a,
+    a {
+      color: palette(neutral-dark-grey);
+    }
+    a,
+    .fa,
+    &.menu a {
+      &:hover {
+        transition: 0.3s;
+        color: palette(neutral-light-grey);
+        &:before {
+          color: palette(neutral-light-grey);
+        }
+      }
+    }
+  }
+  .text-neutral-light-grey, {
+    color: palette(neutral-light-grey);
+  }
+  section img {
+    max-width: calc-rem(1200px) !important; /* !important to override the fluid image class */
+    margin: auto;
+  }
+}

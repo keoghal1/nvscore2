@@ -1,0 +1,50 @@
+.js-form-type-select {
+  padding: 0 !important;
+  @media #{$mobile} {
+    margin: calc-rem(5px) auto;
+  }
+  @media #{$tablet} {
+    margin: calc-rem(5px) 0;
+  }
+  &:before {
+    content: "\e90e";
+    color: palette(brand-accent);
+    font-family: 'icomoon',sans-serif !important;
+    font-size: calc-rem(10px);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  &:after {
+    content: '';
+    border-right: 2px solid palette(very-light-pink);
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    right: 26px;
+  }
+  select {
+    appearance: none;
+    border: 0;
+    color: palette(button-link-blue);
+    font-size: calc-rem(13px);
+    border-radius: 0;
+    padding: calc-rem(5px) calc-rem(35px) calc-rem(5px) 0;
+    height: auto !important;
+    text-transform: uppercase;
+    background: transparent;
+    position: relative;
+    line-height: calc-rem(13px);
+    font-family: type(sans, bold);
+    cursor: pointer;
+    &:focus {
+      color: palette(button-link-blue);
+      background-color: transparent;
+    }
+  }
+  select::-ms-expand {
+    display: none;
+  }
+}

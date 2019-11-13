@@ -1,0 +1,7 @@
+novartis_dolphin.image_pixel_density:
+  label: Pixel Density
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x

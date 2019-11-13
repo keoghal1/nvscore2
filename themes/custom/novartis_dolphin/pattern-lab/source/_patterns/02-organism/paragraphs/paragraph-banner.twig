@@ -1,0 +1,38 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class
+  ]
+%}
+{% block paragraph %}
+  <div class="paragraph--banner">
+    <div {{ attributes.addClass(classes, banner_text_color)}}>
+      <div class="content-wrapper">
+        {% if heading|render %}
+          {% block heading %}
+            {% if heading %}
+              {% include '@atoms/07-elements/headings/heading.twig' with {
+                "heading_level": heading_level ?: 1,
+                "heading": heading
+              } %}
+            {% endif %}
+          {% endblock heading %}
+        {% endif %}
+        {% block content %}
+          {% if type == "scroll" %}
+            {{ content|without('field_banner_title', 'field_button_link') }}
+          {% elseif type == "button" %}
+            {{ content|without('field_banner_title') }}
+          {% else %}
+            {{ content|without('field_button_link', 'field_banner_title') }}
+          {% endif %}
+        {% endblock %}
+      </div>
+      {% if credits %}
+        <span class="image--credit p-credits">
+          {{ credits }}
+        </span>
+      {% endif %}
+    </div>
+  </div>
+{% endblock paragraph %}

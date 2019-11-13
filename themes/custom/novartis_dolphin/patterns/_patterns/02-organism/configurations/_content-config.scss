@@ -1,0 +1,451 @@
+/* 1 - Increasing specificity */
+
+.paragraph--type--content-container {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      text-decoration: none !important; /* 1 */
+
+      &:hover {
+        text-decoration: underline !important; /* 1 */
+        transition: ease 0.3s;
+      }
+    }
+  }
+  &.text-theme-light {
+    p,
+    .image--credit,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    ul,
+    ol,
+    li,
+    .field--name-field-block-description {
+      color: palette(white);
+    }
+    a:not(.button):hover {
+      color: palette(brand-accent);
+    }
+
+    a.content-block-hover {
+      text-decoration: none !important;
+
+      &:hover {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+  }
+
+  &.text-theme-dark {
+    p,
+    .image--credit,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    ul,
+    ol,
+    li,
+    .field--name-field-block-description {
+      color: palette(black);
+    }
+    a:not(.button):hover {
+      color: palette(neutral-light-grey);
+    }
+
+    a.content-block-hover {
+      text-decoration: none !important;
+
+      &:hover {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+  }
+
+  &.text-theme-default {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: palette(brand-primary);
+    }
+    p,
+    .image--credit,
+    input,
+    ul,
+    ol,
+    li,
+    .field--name-field-block-description {
+      color: palette(neutral-dark-grey);
+    }
+    p {
+      a:not(.button) {
+        color: palette(brand-accent);
+        &:hover {
+          color: palette(brand-accent-light);
+        }
+      }
+    }
+
+    a.content-block-hover {
+      text-decoration: none !important;
+
+      &:hover {
+        h3 {
+          color: palette(brand-primary-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+  }
+
+  &.field-text-color-none {
+    a.content-block-hover:hover {
+      text-decoration: none;
+      .text-theme-light {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+
+      .text-theme-default {
+        h3 {
+          color: palette(brand-primary-light);
+          transition: ease 0.3s;
+        }
+      }
+      .text-theme-dark {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+  }
+}
+@media #{$desktop} {
+  .scrollup {
+    .ui-autocomplete:not(.search_block_embedded) {
+      max-width: calc-rem(160px) !important;
+      word-wrap: break-word;
+    }
+  }
+
+  .scrolled.scrollup,
+  .scrolldown {
+    .ui-autocomplete:not(.search_block_embedded) {
+      max-width: calc-rem(180px) !important;
+    }
+  }
+}
+
+//Auto complete overrides
+.ui-autocomplete:not(.search_block_embedded) {
+  overflow: auto !important;
+  li {
+    a {
+      color: inherit !important;
+    }
+  }
+  .autocomplete-suggestion-label {
+    word-break: break-all;
+  }
+  &.search-api-autocomplete-search {
+    @media #{$desktop} {
+      max-width: calc-rem(160px) !important;
+      word-wrap: break-word;
+    }
+  }
+}
+ul[id*="ui-id-"].search-api-autocomplete-search.search_block_embedded {
+  padding: 10px;
+  li {
+    a {
+      color: inherit !important;
+    }
+  }
+}
+ul[id*="ui-id-"].search-api-autocomplete-search.search_block_embedded:not(.search_block_embedded)  {
+  &.brand-primary-text {
+    li.ui-menu-item > a {
+      color: palette(brand-primary);
+    }
+  }
+  &.brand-secondary-text {
+    li.ui-menu-item > a {
+      color: palette(brand-secondary);
+    }
+  }
+  &.brand-accent-text {
+    li.ui-menu-item > a {
+      color: palette(brand-accent);
+    }
+  }
+  &.white-text {
+    li.ui-menu-item > a {
+      color: palette(white);
+    }
+  }
+  &.black-text {
+    li.ui-menu-item > a {
+      color: palette(black);
+    }
+  }
+}
+.block-protected-pages-banner {
+  .search-banner-content {
+    padding-bottom: 6.4375rem;
+  }
+  @media #{$mobile} {
+    text-align: center;
+  }
+}
+#protected-pages-enter-password {
+  .protected_pages_description {
+    text-align: center;
+  }
+  .js-form-type-password {
+    padding: 30px 0 0 0;
+  }
+  input#edit-password {
+    margin: 0 auto;
+    background-color: rgba(4,96,169,.1);
+    border-radius: 1.5625rem;
+    border: none;
+    padding: .9375rem;
+    font-size: .8125rem;
+    width: 100%;
+    margin-top: 0;
+    background-image: none;
+  }
+  input#edit-submit {
+    margin: 40px auto;
+  }
+  fieldset {
+    width: 60%;
+    margin: 0 auto;
+    @media #{$mobile} {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
+
+a.content-block-wrapper {
+
+  text-decoration: none !important; /* 1 */
+
+  &:hover {
+  text-decoration: none;
+
+  // Button background color on hover
+  .brand-primary {
+    background-color: palette(brand-primary-light);
+  }
+  .brand-secondary {
+    background-color: palette(brand-secondary-light);
+  }
+  .brand-accent {
+    background-color: palette(brand-accent-light);
+  }
+
+  // Button border color
+  .brand-primary-border {
+    border-color: palette(brand-primary-light);
+  }
+  .brand-secondary-border {
+    border-color: palette(brand-secondary-light);
+  }
+  .brand-accent-border {
+    border-color: palette(brand-accent-light);
+  }
+
+  // Button text color
+  .brand-primary-text {
+    color: palette(brand-primary-light);
+  }
+  .brand-secondary-text {
+    color: palette(brand-secondary-light);
+  }
+  .brand-accent-text {
+    color: palette(brand-accent-light);
+  }
+
+  }
+}
+
+.node--unpublished {
+  padding: 0;
+  background-color: palette(utility-caution-light);
+}
+
+.node--type-article {
+  .paragraph--type--content-container {
+    a.content-block-hover:hover {
+      .paragraph--type--linked-teaser {
+        &.text-theme-light {
+          h3 {
+            color: palette(brand-accent-light);
+            transition: ease 0.3s;
+          }
+
+        }
+        &.text-theme-dark {
+          h3 {
+            color: palette(brand-accent-light);
+            transition: ease 0.3s;
+          }
+        }
+        &.text-theme-default {
+          h3 {
+            color: palette(brand-primary-light);
+            transition: ease 0.3s;
+          }
+        }
+      }
+    }
+    .paragraph--type--linked-teaser {
+      &.text-theme-light {
+        h1, h2, h3,
+        .field--name-field-block-description,
+        p {
+          color: palette(white);
+        }
+
+        h3:hover {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+
+      }
+      &.text-theme-dark {
+        h1, h2, h3,
+        .field--name-field-block-description,
+        p {
+          color: palette(neutral-black);
+        }
+
+        h3:hover {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+      &.text-theme-default {
+        h1, h2, h3 {
+          color: palette(brand-primary);
+
+          &:hover {
+            color: palette(brand-primary-light);
+            transition: ease 0.3s;
+          }
+        }
+        .field--name-field-block-description,
+        p {
+          color: palette(neutral-dark-grey);
+        }
+      }
+    }
+  }
+}
+
+article.node--view-mode-content-bottom {
+  .paragraph--type--content-container.paragraph--view-mode--default {
+    &.text-theme-light {
+
+      p,
+      .image--credit,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      input,
+      ul,
+      ol,
+      li,
+      .field--name-field-block-description {
+        color: palette(white);
+      }
+
+      a.content-block-hover:hover {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+    &.text-theme-dark {
+      p,
+      .image--credit,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      input,
+      ul,
+      ol,
+      li,
+      .field--name-field-block-description {
+        color: palette(black);
+      }
+
+      a.content-block-hover:hover {
+        h3 {
+          color: palette(brand-accent-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+    &.text-theme-default {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: palette(brand-primary);
+      }
+      p,
+      .image--credit,
+      input,
+      ul,
+      ol,
+      li,
+      .field--name-field-block-description {
+        color: palette(neutral-dark-grey);
+      }
+
+      a.content-block-hover:hover {
+        h3 {
+          color: palette(brand-primary-light);
+          transition: ease 0.3s;
+        }
+      }
+    }
+  }
+}

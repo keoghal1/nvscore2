@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%} 
+
+<div {{attributes}} class ="image--paragraph">
+  {% if content.field_image_url.0 is empty %} 
+    {{ content.field_image_title }}
+    {{ content.field_image }}
+    {% if paragraph.field_image.entity.field_image_credit_attribution.value %}
+      <div class="image--credit">
+        {{ paragraph.field_image.entity.field_image_credit_attribution.value }}
+      </div>
+    {% endif %}
+  {% else %}
+    <a href={{ content.field_image_url.0['#url'] }}>{{ content.field_image }}</a>
+    {{ content.field_image_title }}
+    {% if paragraph.field_image.entity.field_image_credit_attribution.value %}
+      <div class="image--credit">
+        {{ paragraph.field_image.entity.field_image_credit_attribution.value }}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>

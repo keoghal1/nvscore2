@@ -1,0 +1,95 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["block-facet--links", "block-facets", "block-facet-blockcontent-type"],
+      "id": "block-contenttype"
+    }
+  },
+  "content": {
+    "join()": [{
+      "include()": {
+        "pattern": "molecules-facets",
+        "with": {
+          "facet": {
+            "widget": {
+              "type": "links"
+            }
+          },
+          "title": null,
+          "list_type": "ul",
+          "attributes": {
+            "Attribute()": {
+              "class": ["item-list__links"]
+            }
+          },
+          "items": [{
+            "attributes": {
+              "Attribute()": {
+                "class": ["facet-item"]
+              }
+            },
+            "value": {
+              "join()": [{
+                "include()": {
+                  "pattern": "atoms-links",
+                  "with": {
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["is-active"],
+                        "href": "www.google.com"
+                      }
+                    },
+                    "text": "All"
+                  }
+                }
+              }]
+            }
+          },{
+            "attributes": {
+              "Attribute()": {
+                "class": ["facet-item"]
+              }
+            },
+            "value": {
+              "join()": [{
+                "include()": {
+                  "pattern": "atoms-links",
+                  "with": {
+                    "attributes": {
+                      "Attribute()": {
+                        "class": "",
+                        "href": "www.google.com"
+                      }
+                    },
+                    "text": "Article"
+                  }
+                }
+              }]
+            }
+          },{
+            "attributes": {
+              "Attribute()": {
+                "class": ["facet-item"]
+              }
+            },
+            "value": {
+              "join()": [{
+                "include()": {
+                  "pattern": "atoms-links",
+                  "with": {
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ""
+                      }
+                    },
+                    "text": "Experts"
+                  }
+                }
+              }]
+            }
+          }]
+        }
+      }
+    }]
+  }
+}

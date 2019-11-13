@@ -1,0 +1,13 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["brand-primary", "text-theme-default"]
+    }
+  },
+  "data": {
+    "banner_bg_color": true,
+    "banner_title": "Search result for",
+    "search_string": "keyword",
+    "banner_subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+}

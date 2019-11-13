@@ -1,0 +1,404 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["region", "region-pre-content", "container"]
+    }
+  },
+  "content": {
+    "join()": [{
+      "include()": {
+        "pattern": "molecules-block",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["views-exposed-form"]
+            }
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-form",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "id": "views-exposed-form-acquia-search-page"
+                    }
+                  },
+                  "children": {
+                    "join()": [{
+                      "include()": {
+                        "pattern": "molecules-views-exposed-form",
+                        "with": {
+                          "form": {
+                            "join()": [{
+                              "include()": {
+                                "pattern": "molecules-form-elements",
+                                "with": {
+                                  "attributes": {
+                                    "Attribute()": {
+                                      "class": ["form-item-search"]
+                                    }
+                                  },
+                                  "type": "text",
+                                  "name": "form-name",
+                                  "label": {
+                                    "join()": [{
+                                      "include()": {
+                                        "pattern": "atoms-label",
+                                        "with": {
+                                          "title": "",
+                                          "title_display": "before",
+                                          "attributes": {
+                                            "Attribute()": {
+                                              "class": ["form__label--class"]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }]
+                                  },
+                                  "children": {
+                                    "join()": [{
+                                      "include()": {
+                                        "pattern": "atoms-textfield",
+                                        "with": {
+                                          "attributes": {
+                                            "Attribute()": {
+                                              "class": ["input"],
+                                              "id": "edit-search",
+                                              "type": "input",
+                                              "required": "required",
+                                              "placeholder": "'Search Term'"
+                                            }
+                                          },
+                                          "children": null
+                                        }
+                                      }
+                                    }]
+                                  },
+                                  "label_display": "before",
+                                  "description": {
+                                    "content": "",
+                                    "attributes": {
+                                      "Attribute()": {
+                                        "class": ["form-element__description--class"]
+                                      }
+                                    }
+                                  },
+                                  "description_display":"after",
+                                  "disabled": false,
+                                  "title_display": "before"
+                                }
+                              }
+                            },{
+                              "include()": {
+                                "pattern": "molecules-form-elements",
+                                "with": {
+                                  "attributes": {
+                                    "Attribute()": {
+                                      "class": ["js-form-wrapper", "form-actions"]
+                                    }
+                                  },
+                                  "children": {
+                                    "join()": [{
+                                      "include()": {
+                                        "pattern": "atoms-textfield",
+                                        "with": {
+                                          "attributes": {
+                                            "Attribute()": {
+                                              "id": "edit-submit-acquia-search",
+                                              "type": "submit",
+                                              "required": "required"
+                                            }
+                                          },
+                                          "children": null
+                                        }
+                                      }
+                                    }]
+                                  }
+                                }
+                              }
+                            }]
+                          }
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "include()": {
+        "pattern": "molecules-block",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["block-facet--links", "block-facets", "block-facet-blockcontent-type"],
+              "id": "block-contenttype"
+            }
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-facets",
+                "with": {
+                  "facet": {
+                    "widget": {
+                      "type": "links"
+                    }
+                  },
+                  "title": null,
+                  "list_type": "ul",
+                  "attributes": {
+                    "Attribute()": {
+                      "class": ["item-list__links"]
+                    }
+                  },
+                  "items": [{
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["facet-item"]
+                      }
+                    },
+                    "value": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "atoms-links",
+                          "with": {
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["is-active"],
+                                "href": "www.google.com"
+                              }
+                            },
+                            "text": "All"
+                          }
+                        }
+                      }]
+                    }
+                  },{
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["facet-item"]
+                      }
+                    },
+                    "value": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "atoms-links",
+                          "with": {
+                            "attributes": {
+                              "Attribute()": {
+                                "class": "",
+                                "href": "www.google.com"
+                              }
+                            },
+                            "text": "Article"
+                          }
+                        }
+                      }]
+                    }
+                  },{
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["facet-item"]
+                      }
+                    },
+                    "value": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "atoms-links",
+                          "with": {
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ""
+                              }
+                            },
+                            "text": "Experts"
+                          }
+                        }
+                      }]
+                    }
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "include()": {
+        "pattern": "molecules-block",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["exposed-sort-block-form"]
+            }
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-views-exposed-form",
+                "with": {
+                  "form": {
+                    "join()": [{
+                      "include()": {
+                        "pattern": "molecules-form-elements",
+                        "with": {
+                          "attributes": {
+                            "Attribute()": {
+                              "class": ["form-element--class", "js-form-type-select"]
+                            }
+                          },
+                          "type": "text",
+                          "name": "form-name",
+                          "label": {
+                            "join()": [{
+                              "include()": {
+                                "pattern": "atoms-label",
+                                "with": {
+                                  "title": "",
+                                  "title_display": "before",
+                                  "attributes": {
+                                    "Attribute()": {
+                                      "class": ["form__label--class"]
+                                    }
+                                  }
+                                }
+                              }
+                            }]
+                          },
+                          "children": {
+                            "join()": [{
+                              "include()": {
+                                "pattern": "atoms-select",
+                                "with": {
+                                  "options": [{
+                                    "type": "option",
+                                    "value": "most recent",
+                                    "label": "Most recent"
+                                  },{
+                                    "type": "option",
+                                    "value": "most relevant",
+                                    "label": "Most relevant"
+                                  }],
+                                  "children": null
+                                }
+                              }
+                            }]
+                          },
+                          "label_display": "before",
+                          "description": {
+                            "content": "",
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["form-element__description--class"]
+                              }
+                            }
+                          },
+                          "description_display":"after",
+                          "disabled": false,
+                          "title_display": "before"
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        }
+      }
+    }, {
+      "include()": {
+        "pattern": "molecules-block",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["exposed-sort-block-form"]
+            }
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-views-exposed-form",
+                "with": {
+                  "form": {
+                    "join()": [{
+                      "include()": {
+                        "pattern": "molecules-form-elements",
+                        "with": {
+                          "attributes": {
+                            "Attribute()": {
+                              "class": ["form-element--class", "js-form-type-select"]
+                            }
+                          },
+                          "type": "text",
+                          "name": "form-name",
+                          "label": {
+                            "join()": [{
+                              "include()": {
+                                "pattern": "atoms-label",
+                                "with": {
+                                  "title": "",
+                                  "title_display": "before",
+                                  "attributes": {
+                                    "Attribute()": {
+                                      "class": ["form__label--class"]
+                                    }
+                                  }
+                                }
+                              }
+                            }]
+                          },
+                          "children": {
+                            "join()": [{
+                              "include()": {
+                                "pattern": "atoms-select",
+                                "with": {
+                                  "options": [{
+                                    "type": "option",
+                                    "value": "category 1",
+                                    "label": "Category 1"
+                                  },{
+                                    "type": "option",
+                                    "value": "category 2",
+                                    "label": "Category 2"
+                                  },{
+                                    "type": "option",
+                                    "value": "category 3",
+                                    "label": "Category 3"
+                                  }],
+                                  "children": null
+                                }
+                              }
+                            }]
+                          },
+                          "label_display": "before",
+                          "description": {
+                            "content": "",
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["form-element__description--class"]
+                              }
+                            }
+                          },
+                          "description_display":"after",
+                          "disabled": false,
+                          "title_display": "before"
+                        }
+                      }
+                    }]
+                  }
+                }
+              }
+            }]
+          }
+        }
+      }
+    }]
+  }
+}

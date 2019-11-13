@@ -1,0 +1,13 @@
+{
+  "content": {
+    "join()": [{
+      "include()": {
+        "pattern": "atoms-image",
+        "with": {
+          "img_src": "http://via.placeholder.com/270x270",
+          "img_alt": "alt text"
+        }
+      }
+    }]
+  }
+}

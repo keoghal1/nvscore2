@@ -1,0 +1,22 @@
+{
+  "type": "radio",
+  "input_title": "Form label",
+  "input_attributes": {
+    "Attribute()": {
+      "class": ["radio-item"],
+      "type": "radio"
+    }
+  },
+  "label_display": "after",
+  "description": {
+    "content": "",
+    "attributes": {
+      "Attribute()": {
+        "class": ["form-element__description--class"]
+      }
+    }
+  },
+  "description_display":"after",
+  "disabled": false,
+  "title_display": "before"
+}

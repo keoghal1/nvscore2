@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'expert-cta'
+  ]
+%}
+<div {{ attributes.addClass(classes, theme_color) }}>
+  {{ title_prefix }}
+    {% block label %}
+      {% if label %}
+        <div class="curated--title">{{ label }}</div>
+      {% endif %}
+    {% endblock label %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

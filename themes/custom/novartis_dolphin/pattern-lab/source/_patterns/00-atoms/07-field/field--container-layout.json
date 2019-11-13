@@ -1,0 +1,53 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["field", "field--name-field-layout-1"]
+    }
+  },
+  "items": [{
+    "content": {
+      "join()": [{
+        "include()": {
+          "pattern": "organism-paragraph-content",
+          "with": {
+            "heading": "Urticaria",
+            "bg_image": "/themes/custom/novartis_dolphin/patterns/images/patternlab-dummy-image.jpg",
+            "view_mode": "default",
+            "attributes": {
+              "Attribute()": {
+
+              }
+            },
+            "content": {
+              "join()": [{
+                "include()": {
+                  "pattern": "atoms-field",
+                  "with": {
+                    "multiple": false,
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["text-formatted", "field--name-field-body"]
+                      }
+                    },
+                    "items": [{
+                      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+                    }]
+                  }
+                }
+              },{
+                "include()": {
+                  "pattern": "atoms-field",
+                  "with": {
+                    "items": [{
+                      "content": "<a href='#' class='button--secondary button'>Standard</a>"
+                    }]
+                  }
+                }
+              }]
+            }
+          }
+        }
+      }]
+    }
+  }]
+}

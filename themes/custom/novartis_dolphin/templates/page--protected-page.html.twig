@@ -1,0 +1,43 @@
+{% extends "@pages/page.twig" %}
+{% block content %}
+<div id="main" class="{{ container }}">
+  {{ page.breadcrumb }}
+  {% if (node.gettype) == 'article' %}
+  <div class="row container content-container  clearfix">
+    {% else %}
+    <section class="container">
+      <div class="row content-container clearfix">
+        {% endif %}
+        {% if page.pre_content %}
+          {{ page.pre_content }}
+        {% endif %}
+        {%
+          set content_classes = [
+          page.sidebar ? 'col-lg-8',
+          page.sidebar is empty ? 'col-lg-12'
+        ]
+        %}
+        {%
+          set remove_class = [
+          'order-last',
+          'col'
+        ]
+        %}
+        <section{{ content_attributes.addClass(content_classes).removeClass(remove_class) }}>
+          <a id="main-content" tabindex="-1"></a>
+          {{ page.content }}
+        </section>
+        {% if page.sidebar %}
+          <aside class="col-lg-4" role="complementary">
+            {{ page.sidebar }}
+          </aside>
+        {% endif %}
+      </div>
+    </section>
+    <div class="row content-container clearfix">
+      {% if page.content_bottom %}
+        {{ page.content_bottom }}
+      {% endif %}
+    </div>
+  </div>
+  {% endblock %}

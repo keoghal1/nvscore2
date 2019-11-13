@@ -1,0 +1,29 @@
+<ul class="menu--level--one menu-level-{{ items|first.menu_level }}">
+  <span class="max-width desktop--show">
+    <h4 class="always-active-menu">{{ parentlink }}</h4>
+    {% for key, item in items if key|first != '#' %}
+      {% set menu_item_classes = [
+        'menu-item',
+        'menu--one',
+        item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.in_active_trail ? 'menu-item--active-trail',
+      ] %}
+
+      <li{{ item.attributes.addClass(menu_item_classes) }}>
+        <div class="wrapper">
+          <span class="trigger"> {{ link(item.title, item.url) }} </span>
+          {% if item.is_expanded == true %}
+            <div class="arrow-wrapper">
+              <span class="arrow"></span>
+            </div>
+          {% endif %}
+        </div>
+        {% set rendered_content = item.content|without('') %}
+        {% if rendered_content|render %}
+          {{ rendered_content }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </span>
+</ul>

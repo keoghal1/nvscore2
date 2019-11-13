@@ -1,0 +1,32 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class
+  ]
+%}
+{% block paragraph %}
+<div {{ attributes.addClass(classes)}}>
+    <div class="content-wrapper">
+      {% if heading|render %}
+        {% block heading %}
+          {% if heading %}
+            {% include '@atoms/07-elements/headings/heading.twig' with {
+              "heading_level": heading_level ?: 3,
+              "heading": heading
+            } %}
+          {% endif %}
+        {% endblock heading %}
+      {% endif %}
+      {% block content %}
+        {% include '@atoms/video/video.twig' %}
+      {% endblock %}
+      <div class="inline">
+        <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden">
+          <p> {{ description }} </p>
+        </div>
+        <div class="field field--name-field-cta field--type-link field--label-hidden">
+          <a class="button button--primary button-background--default button-border--default button-border-width--default ext" href="#">Link text</a>
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

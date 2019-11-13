@@ -1,0 +1,93 @@
+// Layout Fixes
+.container,
+.layout-main-wrapper,
+.region-banner .expert-container {
+  @extend %layout-container-styles;
+}
+
+.col {
+  padding: 0;
+}
+
+.region-banner {
+  padding-bottom: calc-rem(80px);
+
+  .block {
+    width: 100%;
+  }
+}
+
+#main-wrapper {
+  padding-top: calc-rem(35px);
+
+  .content-container {
+    > section {
+      @media #{$tablet-max} {
+        padding-bottom: calc-rem(15px);
+      }
+    }
+
+    > aside {
+      @media #{$tablet-max} {
+        padding-top: calc-rem(15px);
+      }
+    }
+  }
+}
+
+.node--type-article {
+
+  @media #{$desktop} {
+    section.region-content {
+      margin: 0;
+    }
+
+    section.region-sidebar {
+      margin: 0;
+    }
+  }
+
+  @media #{$wide} {
+    section.region-content {
+      padding-right: calc-rem(90px);
+      margin: 0;
+    }
+
+    section.region-sidebar {
+      padding-left: calc-rem(20px);
+      margin: 0;
+    }
+  }
+}
+
+.layout-wrapper {
+  @media #{$desktop} {
+    margin: 0;
+  }
+
+  @media #{$wide} {
+    margin: 0;
+  }
+}
+
+.option2 {
+  padding: 0;
+  @media #{$wide} {
+    padding: 0 15px;
+  }
+}
+
+.layout-wrapper-left {
+  @media #{$wide} {
+    padding-right: calc-rem(90px);
+    padding-left: calc-rem(15px);
+    margin: 0;
+  }
+}
+
+.layout-wrapper-right {
+  @media #{$wide} {
+    padding-left: calc-rem(20px);
+    margin: 0;
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["row", "region", "region-footer-first", "container"]
+    }
+  },
+  "content": {
+    "join()": [{
+      "include()": {
+        "pattern": "molecules-block-system-menu",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": "block-menu"
+            }
+          },
+          "configuration": {
+            "label": "conditions"
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-menu--footer-first",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "class": "clearfix"
+                    }
+                  },
+                  "items": [{
+                    "title": "Urticaria",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Skin impressions",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Skin FAQs",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Break free",
+                      "url": "http://www.google.com"
+                    }]
+                  },{
+                    "title": "Psoriasis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Skin impressions",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Ask4Clear",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "AskYourDermatologist",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Skin FAQs",
+                      "url": "http://www.google.com"
+                    }]
+                  },{
+                    "title": "Psoriatic Arthritis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Find support",
+                      "url": "http://www.google.com"
+                    }]
+                  },{
+                    "title": "Ankylosing Spondylitis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Find support",
+                      "url": "http://www.google.com"
+                    }]
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "include()": {
+        "pattern": "molecules-block-system-menu",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": "block-menu"
+            }
+          },
+          "configuration": {
+            "label": "articles"
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-menu--footer-first",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "class": "clearfix"
+                    }
+                  },
+                  "items": [{
+                    "title": "Most recent articles",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Article Name",
+                      "url": "http://www.google.com"
+                    }]
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "include()": {
+        "pattern": "molecules-block-system-menu",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": "block-menu"
+            }
+          },
+          "configuration": {
+            "label": "experts"
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-menu--footer-first",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "class": "clearfix"
+                    }
+                  },
+                  "items": [{
+                    "title": "Urticaria",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    }]
+                  },{
+                    "title": "Psoriasis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    }]
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "include()": {
+        "pattern": "molecules-block-system-menu",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": "block-menu"
+            }
+          },
+          "configuration": {
+            "label": "Page"
+          },
+          "content": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-menu--footer-first",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "class": "clearfix"
+                    }
+                  },
+                  "items": [{
+                    "title": "Psoriatic Arthritis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    }]
+                  },{
+                    "title": "Ankylosing Spondylitis",
+                    "url": "http://www.google.com",
+                    "below": [{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    },{
+                      "title": "Name of expert",
+                      "url": "http://www.google.com"
+                    }]
+                  }]
+                }
+              }
+            }]
+          }
+        }
+      }
+    }]
+  }
+}

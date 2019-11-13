@@ -1,0 +1,8 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "value": ["Primary"],
+      "class": "button--primary"
+    }
+  }
+}
