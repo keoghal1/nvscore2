@@ -40,7 +40,8 @@
     "drush/drush": "^9.0.0",
     "vlucas/phpdotenv": "^2.4",
     "webmozart/path-util": "^2.3",
-    "zaporylie/composer-drupal-optimizations": "^1.0"
+    "zaporylie/composer-drupal-optimizations": "^1.0",
+    "drupal/extlink": "^1.1",
   },
   "require-dev": {
   },
