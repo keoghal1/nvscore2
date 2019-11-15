@@ -1,0 +1,24 @@
+{
+  "id": "unique",
+  "effect": "slide",
+  "interval": "5000",
+  "indicators": "true",
+  "navigation": "true",
+  "use_caption": "true",
+  "rows": [
+    {
+      "img_src": "http://via.placeholder.com/1440x960",
+      "img_alt": "Expert banner fullwidth for the first slider",
+      "title": "title for title one",
+      "description": "description for the 1st slider",
+      "field_text_alignment": "left"
+    },
+    {
+      "img_src": "http://via.placeholder.com/1440x960",
+      "img_alt": "Expert banner fullwidth for the second slider",
+      "title": "title for title second",
+      "description": "description for the 2nd slider",
+      "field_text_alignment": "right"
+    }
+  ]
+}

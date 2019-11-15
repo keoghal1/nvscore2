@@ -1,0 +1,129 @@
+/////////////////////////////
+/// SCSS INIT
+/////////////////////////////
+
+html { // http://bit.ly/1qk2tVR
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+  }
+}
+
+p {
+  font-size: calc-rem(15px);
+}
+
+strong {
+  font-family: type(sans, bold);
+}
+
+body,html{
+  display: block;
+  height: 100%;
+  position: relative;
+  font-family: type(sans, regular);
+  color: palette(text);
+}
+
+body{
+  font-size: $body-font-size;
+  position:relative;
+}
+
+.block {
+  @extend %block;
+  @include clearfix;
+}
+
+.disable-hover{
+  pointer-events:none;
+}
+
+b,strong{
+  font-weight:700;
+}
+
+i,em{
+  font-style:italic;
+}
+
+input,button{
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: type(sans);
+}
+
+input:focus, textarea:focus,button,input[type="submit"]{
+    outline:none;
+}
+
+button,input[type="submit"]{
+    cursor:pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+    border: none;
+}
+input, textarea, select, button {
+    font-size: 1em;
+}
+
+menu {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.aria-hidden,
+.hidden {
+    display: none;
+}
+
+body.flex {
+  display: flex;
+
+  div.wrapper {
+    width: 100%;
+  }
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+::-ms-clear {
+  display: none;
+}

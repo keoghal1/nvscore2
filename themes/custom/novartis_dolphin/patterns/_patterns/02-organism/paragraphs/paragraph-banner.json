@@ -1,0 +1,11 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["paragraph--type--banner"],
+      "style": ["background-image: url('http://via.placeholder.com/2880x1400')"]
+    }
+  },
+  "paragraph": "paragraph--type--banner",
+  "heading": "Living well with Urticaria",
+  "content": "Sometimes, living with CSU can feel like putting your life on hold – and we want to change that. We’re here to support you through your journey with CSU, offering support and advice on the things that matter most to you, from relationships to simply getting a good night's sleep.<a href='#dolphin-banner-bottom-586' data-banner-scroll-target='#dolphin-banner-bottom-586' tabindex='-1'>Scroll</a>"
+}

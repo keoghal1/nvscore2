@@ -1,0 +1,29 @@
+.textfield,
+.form-textarea {
+  font-size: calc-rem(15px);
+  line-height: calc-rem(28px);
+  background-color: palette(brand-primary);
+  color: palette(white);
+  border-radius: 25px;
+  padding: calc-rem(8px) calc-rem(20px) calc-rem(4px);
+  &.textfield--light,
+  &.form-textarea--light {
+    background-color: rgba(palette(standard-blue), $high-transparent);
+    color: palette(text);
+  }
+}
+.textfield::placeholder {
+  color: palette(white);
+}
+.textfield--light::placeholder {
+  color: palette(text);
+}
+.form-textarea::placeholder {
+  color: palette(white);
+}
+.form-textarea--light::placeholder {
+  color: palette(text);
+}
+.form-textarea {
+  border-color: transparent;
+}

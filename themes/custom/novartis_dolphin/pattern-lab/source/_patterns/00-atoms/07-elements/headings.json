@@ -1,0 +1,24 @@
+{
+  "items": {
+    "1": {
+      "heading": "h1",
+      "heading_base_class": "h1"
+    },
+    "2": {
+      "heading": "h2",
+      "heading_base_class": "h2"
+    },
+    "3": {
+      "heading": "h3",
+      "heading_base_class": "h3"
+    },
+    "4": {
+      "heading": "h4",
+      "heading_base_class": "h4"
+    },
+    "5": {
+      "heading": "h5",
+      "heading_base_class": "h5"
+    }
+  }
+}

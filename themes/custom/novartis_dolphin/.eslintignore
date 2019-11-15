@@ -1,0 +1,8 @@
+gulp-tasks/*
+gulpfile.js
+patterns/js/2076321.js
+patterns/js/bundle.js
+patterns/js/modernizr.js
+patterns/js/range-touch.min.js
+patterns/js/jquery-3.js
+patterns/js/svgxuse_js.js

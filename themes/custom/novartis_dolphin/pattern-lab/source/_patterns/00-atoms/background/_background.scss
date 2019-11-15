@@ -1,0 +1,118 @@
+.brand-primary,
+.header .search-brand-primary  {
+  background: palette(brand-primary);
+}
+.brand-primary-light,
+.header .search-brand-primary-light {
+  background: palette(brand-primary-light);
+}
+.brand-secondary,
+.header .search-brand-secondary {
+  background: palette(brand-secondary);
+}
+.brand-secondary-light,
+.header .search-brand-secondary-light {
+  background: palette(brand-secondary-light);
+}
+.brand-accent,
+.header .search-brand-accent {
+  background: palette(brand-accent);
+}
+.brand-accent-light,
+.header .search-brand-accent-light {
+  background: palette(brand-accent-light);
+}
+.white,
+.header .search-white {
+  background: palette(white);
+}
+.neutral-dark-grey,
+.header .search-neutral-dark-grey {
+  background: palette(neutral-dark-grey);
+}
+.neutral-light-grey,
+.header .search-neutral-light-grey {
+  background: palette(neutral-light-grey);
+}
+.black,
+.header .search-black {
+  background: palette(black);
+}
+.utility-positive {
+  background: palette(utility-positive);
+}
+.utility-positive-light {
+  background: palette(utility-positive-light);
+}
+.utility-negative {
+  background: palette(utility-negative);
+}
+.utility-negative-light {
+  background: palette(utility-negative-light);
+}
+.utility-caution {
+  background: palette(utility-caution);
+}
+.utility-caution-light {
+  background: palette(utility-caution-light);
+}
+.utility-neutral-light {
+  background: palette(utility-neutral-light);
+}
+.very-light-pink {
+  background: palette(brand-primary-light);
+}
+.utility-neutral {
+  background: palette(utility-neutral);
+}
+.brand-tertiary {
+  background: palette(brand-tertiary);
+}
+.brand-tertiary-light {
+  background: palette(brand-tertiary-light);
+}
+.brand-quaternary {
+  background: palette(brand-quaternary);
+}
+.brand-quaternary-light {
+  background: palette(brand-quaternary-light);
+}
+.brand-quinary {
+  background: palette(brand-quinary);
+}
+.brand-quinary-light {
+  background: palette(brand-quinary-light);
+}
+.neutral-black,
+.header .search-neutral-black {
+  background: palette(black);
+}
+.neutral-white,
+.header .search-neutral-white {
+  background: palette(white);
+}
+.gradient-primary {
+  background-image: linear-gradient(to bottom, palette(brand-primary), palette(brand-secondary));
+}
+.gradient-secondary {
+  background-image: linear-gradient(to bottom, palette(brand-secondary), palette(brand-primary));
+}
+.gradient-primary-left {
+  background-image: linear-gradient(to right, palette(brand-primary), palette(brand-secondary));
+}
+.gradient-primary-reverse {
+  background-image: linear-gradient(to right, palette(brand-secondary), palette(brand-primary));
+}
+.header {
+  &.post-* {
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  &[class*="desktop-"] {
+    transition: all 0.3s ease-in-out;
+  }
+  &[class*="brand-"], &[class*="search-brand-"], &[class*="search-"], &[class*="neutral-"],
+  &[class*="utility-"], &[class*="gradient-"]{
+    transition: all 0.3s ease-in-out;
+  }
+}

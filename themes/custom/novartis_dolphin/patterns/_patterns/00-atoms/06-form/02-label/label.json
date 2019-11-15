@@ -1,0 +1,9 @@
+{
+  "title": "Form Element Label",
+  "title_display": "before",
+  "attributes": {
+    "Attribute()": {
+      "class": ["form-element__label--class"]
+    }
+  }
+}

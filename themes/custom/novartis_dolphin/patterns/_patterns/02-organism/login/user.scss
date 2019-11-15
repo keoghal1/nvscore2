@@ -1,0 +1,129 @@
+.page-user-password,
+.page-user-login {
+
+  .main-content {
+    max-width: calc-rem(550px);
+    padding: calc-rem(16px) !important;
+    margin: calc-rem(50px) auto;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .user-login-form,
+  .user-pass {
+    input[type='text'],
+    input[type='password'] {
+      width: 100%;
+      padding: calc-rem(10px);
+      border: 1px solid palette(brand-primary);
+      border-radius: 3px !important;
+      text-align: left;
+    }
+  
+    .description,
+    p {
+      font-size: calc-rem(12px);
+    }
+
+    .simplesamlphp-auth-login-link {
+      display: block;
+      max-width: calc-rem(300px);
+      text-align: center;
+      margin: calc-rem(20px) auto;
+      border: 1px solid palette(brand-secondary);
+      color: palette(brand-secondary);
+      padding: calc-rem(16px);
+      border-radius: 3px;
+    }
+
+    .form-group {
+      padding: 0;
+      margin-bottom: 0;
+      margin-top: calc-rem(16px);
+    }
+  }
+
+  .nav-tabs,
+  .nav-link  {
+    border: none;
+    padding: 0;
+  }
+
+  .nav-tabs {
+    background: rgba(50, 76, 129, 0.13333333333333333);
+    display: inline-block;
+    border-radius: calc-rem(20px);
+
+    li {
+      display: inline-block;
+      border-radius: calc-rem(20px);
+      padding: calc-rem(11px) calc-rem(20px);
+      a {
+        background-color: transparent !important;
+        color: palette(brand-primary);
+        font-size: calc-rem(12px);
+      }
+
+      &.active  {
+        background-color: palette(brand-primary);
+        
+
+        a {
+          color: palette(white);
+        }
+      }
+    }
+  }
+}
+
+#tfa-base-overview,
+.tfa-setup,
+.tfa-entry-form {
+  max-width: calc-rem(550px);
+  padding: calc-rem(16px);
+  margin: calc-rem(100px) auto;
+  text-align: left;
+}
+
+.tfa-setup,
+.tfa-entry-form {
+  input[type='text'],
+  input[type='password'] {
+    width: 100%;
+    padding: calc-rem(10px);
+    border: 1px solid palette(brand-primary);
+    border-radius: 3px !important;
+    text-align: left;
+  }
+
+  #edit-seed,
+  .ga-login-qr-code {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  label,
+  .description {
+    text-align: left;
+    display: block;
+  }
+
+  .button {
+    margin-top: calc-rem(16px);
+  }
+
+  .item-list {
+    text-align: left;
+  }
+
+  .list-group {
+    margin: calc-rem(16px) 0;
+
+    .list-group-item {
+      padding: calc-rem(16px);
+    }
+  }
+}

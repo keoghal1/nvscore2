@@ -1,0 +1,45 @@
+{
+  "options": {
+    "browserSync": {
+      "proxy": {
+        "target": "http://local.novartis-dolphin.com"
+      },
+      "open": "external",
+      "xip": true,
+      "logConnections": true
+    },
+    "patternlab": {
+      "files": "patterns/_patterns/**/*.{twig,json,md,yml}"
+    },
+    "css": {
+      "files": "patterns/css/**/*.css",
+      "file": "patterns/css/styles.css",
+      "destination": "patterns/css/"
+    },
+    "sass": {
+      "files": "patterns/_patterns/**/*.scss",
+      "file": "patterns/_patterns/styles.scss",
+      "destination": "patterns/css/"
+    },
+    "js": {
+      "files": "js/src**/*.js",
+      "destination": "js/dist"
+    },
+    "jsLinting": {
+      "files": {
+        "theme": [
+          "patterns/js/*.js",
+          "!patterns/js/*.min.js"
+        ],
+        "gulp": [
+          "gulpfile.js",
+          "gulp-tasks/**/*"
+        ]
+      }
+    },
+    "images": {
+      "files": "images/**/*.{png,gif,jpg,svg}",
+      "destination": "images/"
+    }
+  }
+}

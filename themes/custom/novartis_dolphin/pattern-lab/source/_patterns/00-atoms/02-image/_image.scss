@@ -1,0 +1,52 @@
+img,
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto;
+  padding: calc-rem(9px) 0;
+  max-width: calc-rem(200px);
+  
+  @media #{$desktop} {
+    padding: calc-rem(14px) 0;
+  }
+}
+
+
+.banner-bg-image--brand-overlay,
+.banner-bg-image--light-overlay,
+.banner-bg-image--dark-overlay,
+.light-overlay,
+.dark-overlay,
+.brand-overlay {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+.banner-bg-image--brand-overlay,
+.brand-overlay {
+  &:before {
+    background-image: linear-gradient(to bottom right, palette(brand-primary), opac-rgba(palette(brand-secondary)));
+  }
+}
+.banner-bg-image--light-overlay,
+.light-overlay {
+  &:before {
+    background-image: linear-gradient(to top right, palette(white), opac-rgba(palette(neutral-dark-grey)));
+  }
+}
+.banner-bg-image--dark-overlay,
+.dark-overlay {
+  &:before {
+    background-image: linear-gradient(palette(neutral-dark-grey), opac-rgba(palette(neutral-dark-grey),0.25));
+  }
+}

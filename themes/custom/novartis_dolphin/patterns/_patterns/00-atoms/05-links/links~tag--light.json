@@ -1,0 +1,8 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["hash-tag", "hash-tag--light"]
+    }
+  },
+  "text": "#tags"
+}

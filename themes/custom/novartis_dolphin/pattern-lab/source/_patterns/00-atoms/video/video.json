@@ -1,0 +1,11 @@
+{
+	"url": "http://cdnapi.kaltura.com/p/2076321/sp/207632100/embedIframeJs/uiconf_id/36455811/partner_id/2076321?iframeembed=true&playerId=kaltura_player&entry_id=1_n64d1zgx&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;&wid=1_fy7zvseu?iframeembed=true&entry_id=1_n64d1zgx&wid=1_fy7zvseu&flashvars%5BstreamerType%5D=auto&flashvars%5BlocalizationCode%5D=en&flashvars%5BleadWithHTML5%5D=true&flashvars%5BsideBarContainer.plugin%5D=true&flashvars%5BsideBarContainer.position%5D=left&flashvars%5BsideBarContainer.clickToClose%5D=true&flashvars%5Bchapters.plugin%5D=true&flashvars%5Bchapters.layout%5D=vertical&flashvars%5Bchapters.thumbnailRotator%5D=false&flashvars%5BstreamSelector.plugin%5D=true&flashvars%5BEmbedPlayer.SpinnerTarget%5D=videoHolder&flashvars%5BdualScreen.plugin%5D=true",
+	"attributes": {
+	    "Attribute()": {
+	      "width": "854",
+	      "height": "480", 
+	      "allowfullscreen": "allowfullscreen" 
+	    }
+  	},
+  	"fragment": "fragment"
+}

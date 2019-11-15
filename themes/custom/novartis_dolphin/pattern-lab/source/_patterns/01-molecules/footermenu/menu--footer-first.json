@@ -1,0 +1,37 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": "clearfix"
+    }
+  },
+  "items": [{
+    "title": "Urticaria",
+    "url": "http://www.google.com",
+    "below": [{
+      "title": "Skin impressions",
+      "url": "http://www.google.com"
+    },{
+      "title": "Skin FAQs",
+      "url": "http://www.google.com"
+    },{
+      "title": "Break free",
+      "url": "http://www.google.com"
+    }]
+  },{
+    "title": "Psoriasis",
+    "url": "http://www.google.com",
+    "below": [{
+      "title": "Skin impressions",
+      "url": "http://www.google.com"
+    },{
+      "title": "Ask4Clear",
+      "url": "http://www.google.com"
+    },{
+      "title": "AskYourDermatologist",
+      "url": "http://www.google.com"
+    },{
+      "title": "Skin FAQs",
+      "url": "http://www.google.com"
+    }]
+  }]
+}

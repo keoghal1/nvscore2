@@ -1,0 +1,46 @@
+.paragraph--type--join-the-discussion {
+  margin-top: calc-rem(30px);
+  padding: calc-rem(90px) calc-rem(15px);
+  background-image: linear-gradient(to bottom, palette(brand-primary), palette(brand-secondary));
+  @media all and (min-width: 768px) {
+    padding: calc-rem(120px) 0;
+    background-image: linear-gradient(to right, palette(brand-primary), palette(brand-secondary));
+  }
+
+  h2 {
+    font-size: calc-rem(50px);
+    line-height: 1.2;
+    @media #{$mobile} {
+      margin-bottom: calc-rem(26px);
+      text-align: center;
+    }
+    margin-bottom: calc-rem(16px);
+    color: palette(white);
+  }
+  p {
+    @media #{$mobile} {
+      text-align: center;
+    }
+    color: palette(white);
+    line-height: 1.87;
+    padding-bottom: 0;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .social-media-links--platforms  {
+    padding-left: calc-rem(65px);
+    display: flex;
+    @media #{$mobile} {
+      padding-top: calc-rem(56px);
+      padding-left: 0;
+      justify-content: center;
+    }
+    .fa {
+      &:before {
+        color: palette(white);
+      }
+    }
+  }
+}

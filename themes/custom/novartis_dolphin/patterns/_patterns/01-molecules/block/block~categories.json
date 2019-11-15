@@ -1,0 +1,83 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["exposed-sort-block-form"]
+    }
+  },
+  "content": {
+    "join()": [{
+      "include()": {
+        "pattern": "molecules-views-exposed-form",
+        "with": {
+          "form": {
+            "join()": [{
+              "include()": {
+                "pattern": "molecules-form-elements",
+                "with": {
+                  "attributes": {
+                    "Attribute()": {
+                      "class": ["form-element--class", "js-form-type-select"]
+                    }
+                  },
+                  "type": "text",
+                  "name": "form-name",
+                  "label": {
+                    "join()": [{
+                      "include()": {
+                        "pattern": "atoms-label",
+                        "with": {
+                          "title": "",
+                          "title_display": "before",
+                          "attributes": {
+                            "Attribute()": {
+                              "class": ["form__label--class"]
+                            }
+                          }
+                        }
+                      }
+                    }]
+                  },
+                  "children": {
+                    "join()": [{
+                      "include()": {
+                        "pattern": "atoms-select",
+                        "with": {
+                          "options": [{
+                            "type": "option",
+                            "value": "category 1",
+                            "label": "Category 1"
+                          },{
+                            "type": "option",
+                            "value": "category 2",
+                            "label": "Category 2"
+                          },{
+                            "type": "option",
+                            "value": "category 3",
+                            "label": "Category 3"
+                          }],
+                          "children": null
+                        }
+                      }
+                    }]
+                  },
+                  "label_display": "before",
+                  "description": {
+                    "content": "",
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["form-element__description--class"]
+                      }
+                    }
+                  },
+                  "description_display":"after",
+                  "disabled": false,
+                  "title_display": "before"
+                }
+              }
+            }]
+          }
+        }
+      }
+    }]
+  }
+}

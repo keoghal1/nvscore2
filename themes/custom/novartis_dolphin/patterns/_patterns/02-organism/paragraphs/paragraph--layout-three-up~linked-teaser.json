@@ -1,0 +1,251 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["paragraph", "paragraph-layout", "container"]
+    }
+  },
+  "content": {
+    "field_mobile_slider": "slickslider",
+    "field_layout_1": {
+      "join()": [{
+      "include()": {
+        "pattern": "atoms-field--container-layout",
+        "with": {
+          "attributes": {
+            "Attribute()": {
+              "class": ["field", "field--name-field-layout-1"]
+            }
+          },
+          "items": [{
+            "content": {
+              "join()": [{
+                "include()": {
+                  "pattern": "organism-paragraph--linked-teaser",
+                  "with": {
+                    "heading": "",
+                    "attributes": {
+                      "Attribute()": {
+                        "class": ["text-theme-default"]
+                      }
+                    },
+                    "content": {
+                      "join()": [{
+                        "include()": {
+                          "pattern": "atoms-field",
+                          "with": {
+                            "multiple": false,
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["field--name-field-block-image", "field"]
+                              }
+                            },
+                            "items": [{
+                              "content": "<img src='http://via.placeholder.com/270x270' alt='alt text'>"
+                            }]
+                          }
+                        }
+                      }, {
+                        "include()": {
+                          "pattern": "atoms-field",
+                          "with": {
+                            "multiple": false,
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["field--name-field-block-title", "field"]
+                              }
+                            },
+                            "items": [{
+                              "content": "<h3>skin impression</h3>"
+                            }]
+                          }
+                        } 
+                      }, {
+                        "include()": {
+                          "pattern": "atoms-field",
+                          "with": {
+                            "multiple": false,
+                            "attributes": {
+                              "Attribute()": {
+                                "class": ["field--name-field-block-description", "field"]
+                              }
+                            },
+                            "items": [{
+                              "content": "Over 8,300 participants shared their experiences of living with psoriasis"
+                            }]
+                          }
+                        } 
+                      }]
+                    }
+                  }
+
+                }
+              }]
+            }
+          }]
+        }
+
+      }
+      }]
+    }, 
+    "field_layout_2": {
+      "join()": [{
+        "include()": {
+          "pattern": "atoms-field--container-layout",
+          "with": {
+            "attributes": {
+              "Attribute()": {
+                "class": ["field", "field--name-field-layout-2"]
+              }
+            },
+            "items": [{
+              "content": {
+                "join()": [{
+                  "include()": {
+                    "pattern": "organism-paragraph--linked-teaser",
+                    "with": {
+                      "heading": "",
+                      "attributes": {
+                        "Attribute()": {
+                          "class": ["text-theme-default"]
+                        }
+                      },
+                      "content": {
+                        "join()": [{
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-image", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "<img src='http://via.placeholder.com/270x270' alt='alt text'>"
+                              }]
+                            }
+                          }
+                        }, {
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-title", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "<h3>skin impression</h3>"
+                              }]
+                            }
+                          } 
+                        }, {
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-description", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "Over 8,300 participants shared their experiences of living with psoriasis"
+                              }]
+                            }
+                          } 
+                        }]
+                      }
+                    }
+
+                  }
+                }]
+              }
+            }]
+          }
+        }
+      }]
+    },
+    "field_layout_3": {
+      "join()": [{
+        "include()": {
+          "pattern": "atoms-field--container-layout",
+          "with": {
+            "attributes": {
+              "Attribute()": {
+                "class": ["field", "field--name-field-layout-3"]
+              }
+            },
+            "items": [{
+              "content": {
+                "join()": [{
+                  "include()": {
+                    "pattern": "organism-paragraph--linked-teaser",
+                    "with": {
+                      "heading": "",
+                      "attributes": {
+                        "Attribute()": {
+                          "class": ["text-theme-default"]
+                        }
+                      },
+                      "content": {
+                        "join()": [{
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-image", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "<img src='http://via.placeholder.com/270x270' alt='alt text'>"
+                              }]
+                            }
+                          }
+                        }, {
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-title", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "<h3>skin impression</h3>"
+                              }]
+                            }
+                          } 
+                        }, {
+                          "include()": {
+                            "pattern": "atoms-field",
+                            "with": {
+                              "multiple": false,
+                              "attributes": {
+                                "Attribute()": {
+                                  "class": ["field--name-field-block-description", "field"]
+                                }
+                              },
+                              "items": [{
+                                "content": "Over 8,300 participants shared their experiences of living with psoriasis"
+                              }]
+                            }
+                          } 
+                        }]
+                      }
+                    }
+
+                  }
+                }]
+              }
+            }]
+          }
+        }
+      }]
+    }
+  }
+}

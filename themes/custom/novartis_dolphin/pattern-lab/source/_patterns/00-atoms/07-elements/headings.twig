@@ -1,0 +1,20 @@
+{#
+/**
+  * This file is only for generating a Pattern Lab entry.
+  * The file to include in Drupal templates is 00-atoms/text/heading.twig.
+ */
+#}
+<div class="sg-header-styles">
+  {% for i in 1..6 %}
+    {% set heading_base_class = heading_base_class|default('h' ~ i) %}
+      <div class="sg-pattern pl-heading-examples">
+        <h3 class="sg-pattern-title">h{{ i }}</h3>
+        {% for heading in items %}
+          {% set heading_extra_classes = heading.heading_extra_classes %}
+            <h{{ i }} {{ bem(heading_base_class, (heading_modifiers), heading_blockname, heading_extra_classes) }}>
+              H{{ i }}. {{ heading.text }} example
+            </h{{ i }}>
+        {% endfor %}
+      </div>
+  {% endfor %}
+</div>

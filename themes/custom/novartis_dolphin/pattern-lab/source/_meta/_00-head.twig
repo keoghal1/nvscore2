@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="/libraries/bootstrap/css/bootstrap-grid.css?{{ cacheBuster }}" media="all" />
+
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
+
+    {# Live Drupal styles #}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/libraries/slick-carousel/slick/slick.css?{{ cacheBuster }}" media="all" />
+
+    <link rel="stylesheet" href="/libraries/slick-carousel/slick/slick-theme.css?{{ cacheBuster }}" media="all" />
+
+    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
+    {#
+     # Below is the compiled CSS from the original style guide for comparison.
+     # To view Pattern Lab using these styles, uncomment these lines
+     # and comment out the live Drupal styles above.
+     #}
+    {# <link rel="stylesheet" href="../../css/css.css?{{ cacheBuster }}" media="all" /> #}
+    {# <link rel="stylesheet" href="../../css/screen.css?{{ cacheBuster }}" media="all" /> #}
+
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    {{ patternLabHead | raw }}
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="{{ bodyClass }}">
+

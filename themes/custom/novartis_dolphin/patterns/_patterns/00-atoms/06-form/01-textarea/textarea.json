@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["form-textarea"],
+      "id": "",
+      "type": "textarea",
+      "required": "required",
+      "placeholder": "Textarea"
+    }
+  },
+  "children": null
+}

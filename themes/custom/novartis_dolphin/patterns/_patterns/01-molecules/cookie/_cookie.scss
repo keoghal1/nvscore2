@@ -1,0 +1,74 @@
+.eu-cookie-compliance-banner {
+  padding: calc-rem(30px);
+  @media #{$desktop} {
+    padding: 0;
+  }
+  &.text-theme-default {
+    color: palette(white);
+    h2 {
+      color: palette(white);
+    }
+  }
+  #popup-text {
+    margin-top: 0;
+    line-height: calc-rem(22px);
+    font-size: calc-rem(16px);
+    @media #{$desktop} {
+      display: flex;
+      padding-top: calc-rem(13px);
+      padding-bottom: calc-rem(21px);
+    }
+    h2 {
+      font-family: type(sans, bold);
+      @media #{$desktop} {
+        max-width: 160px;
+      }
+    }
+    div,
+    p {
+      font-size: calc-rem(15px);
+      color: inherit;
+    }
+    h2 + p,
+    h2 + div {
+      max-width: 730px;
+      @media #{$desktop} {
+        padding-left: calc-rem(30px);
+      }
+    }
+    a {
+      color: inherit;
+      font-family: type(sans, bold);
+      text-decoration: underline;
+    }
+  }
+  #popup-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: calc-rem(20px);
+    @media #{$desktop} {
+      padding-top: 0;
+    }
+    button {
+      @media #{$small} {
+        max-width: 100%;
+      }
+      background-image: none;
+      text-shadow: none;
+      margin: 0;
+    }
+  }
+}
+/* Overriding cookies css for box shadow */
+.disagree-button.eu-cookie-compliance-more-button,
+.eu-cookie-compliance-agree-button,
+.eu-cookie-compliance-default-button,
+.eu-cookie-compliance-hide-button,
+.eu-cookie-compliance-more-button-thank-you,
+.eu-cookie-withdraw-button,
+.eu-cookie-compliance-save-preferences-button  {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

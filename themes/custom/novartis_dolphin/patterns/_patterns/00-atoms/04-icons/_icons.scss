@@ -1,0 +1,154 @@
+[class^="icon-"], [class*=" icon-"], .fa {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon',sans-serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: calc-rem(40px);
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  &:before {
+    font-weight: normal;
+  }
+  &.icons--blue {
+    &:before {
+      color: #0460a9;
+    }
+  }
+}
+
+.icon-arrow--next-white:before {
+  content: "\e901";
+  color: palette(white);
+}
+.icon-fb-white:before,
+.fa-facebook:before {
+  content: "\e902";
+  color: palette(white);
+}
+.icon-insta-white:before,
+.fa-instagram:before {
+  content: "\e903";
+  color: palette(white);
+}
+.icon-twitter-white:before,
+.fa-twitter:before {
+  content: "\e904";
+  color: palette(white);
+}
+.icon-youtube-white:before,
+.fa-youtube:before {
+  content: "\e905";
+  color: palette(white);
+}
+.icon-linkedin-logo:before,
+.fa-linkedin:before {
+  content: "\e908";
+  color: palette(white);
+}
+.icon-Alia---Chatbot:before {
+  content: "\e900";
+  color: palette(white);
+}
+.icon-Alia-with-TM:before {
+  content: "\e906";
+  color: palette(white);
+}
+.icon-Alia:before {
+  content: "\e907";
+  color: palette(white);
+}
+.icon-Chevron:before {
+  content: "\e909";
+  color: palette(white);
+}
+.icon-Close:before {
+  content: "\e90a";
+  color: palette(white);
+}
+.icon-Doctor-Profile:before {
+  content: "\e90b";
+  color: palette(white);
+}
+.icon-Doctor:before {
+  content: "\e90c";
+  color: palette(white);
+}
+.icon-Dropdown-Divider:before {
+  content: "\e90d";
+  color: palette(very-light-pink);
+}
+.icon-Dropdown:before {
+  content: "\e90e";
+  color: palette(white);
+}
+.icon-Green-Pin:before {
+  content: "\e90f";
+  color: palette(white);
+}
+.icon-Just-ask-Alia:before {
+  content: "\e910";
+  color: palette(white);
+}
+.icon-Menu:before {
+  content: "\e911";
+  color: palette(white);
+}
+.icon-Messenger:before {
+  content: "\e912";
+  color: palette(white);
+}
+.icon-Minus:before {
+  content: "\e913";
+}
+.icon-Plus:before {
+  content: "\e914";
+}
+.icon-Radio-Circle:before {
+  content: "\e915";
+  color: palette(white);
+}
+.icon-search:before {
+  content: "\e916";
+  color: palette(white);
+}
+.icon-Slide .path1:before {
+  content: "\e917";
+  color: rgb(40, 49, 56);
+  opacity: 0.3;
+}
+.icon-Slide .path2:before {
+  content: "\e918";
+  margin-left: -0.5087890625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Slide .path3:before {
+  content: "\e919";
+  margin-left: -0.5087890625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Star---Off:before {
+  content: "\e91a";
+  color: palette(white);
+}
+.icon-Star---On:before {
+  content: "\e91b";
+  color: palette(white);
+}
+.icon-Text:before {
+  content: "\e91c";
+  color: palette(white);
+}
+.icon-Tick:before {
+  content: "\e91d";
+}
+span {
+  &.ext {
+    display: none;
+  }
+}

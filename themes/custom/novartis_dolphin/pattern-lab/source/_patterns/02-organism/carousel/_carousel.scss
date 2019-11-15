@@ -1,0 +1,203 @@
+$bottom-adjustment: 50px;
+$bottom-spacing-mobile: 100px;
+$bottom-spacing-tab: 40px;
+$bottom-spacing-desktop: 60px;
+$bottom-spacing-wide: 160px;
+$pager-height: 10px;
+
+.carousel {
+  margin-bottom: calc-rem(80px);
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+  img {
+    display: block;
+  }
+  .carousel-caption {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 calc-rem(30px);
+    @media #{$tablet} {
+      bottom: $bottom-adjustment;
+    }
+    @media #{$wide} {
+      padding: 0 calc-rem(15px);
+    }
+    &.right {
+      text-align: right;
+      align-items: flex-end;
+      a {
+        margin-top: calc-rem(20px);
+        margin-right: 0;
+      }
+    }
+    &.center {
+      align-items: center;
+      text-align: center;
+      a {
+        margin: 0 auto;
+        margin-top: calc-rem(20px);
+      }
+    }
+    &.left {
+      align-items: flex-start;
+      text-align: left;
+      a {
+        margin-left: 0;
+        margin-top: calc-rem(20px);
+      }
+    }
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+  .h1 {
+    font-size: calc-rem(34px);
+    margin-bottom: calc-rem(10px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    @media #{$tablet} {
+      font-size: calc-rem(70px);
+      margin-bottom: calc-rem(22px);
+    }
+  }
+  .carousel-indicators {
+    text-align: center;
+    padding-bottom: $bottom-spacing-mobile;
+    z-index: initial;
+    @media #{$tablet} {
+      bottom: $bottom-adjustment;
+      padding-bottom: $bottom-spacing-tab;
+    }
+    @media #{$desktop} {
+      padding-bottom: $bottom-spacing-desktop;
+    }
+    @media #{$wide} {
+      padding-bottom: $bottom-spacing-wide;
+    }
+    li {
+      width: 10px;
+      height: $pager-height;
+      border-radius: 10px;
+      background-color: palette(white);
+      opacity: 0.3;
+      display: inline-block;
+      z-index: 1;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  a {
+    max-width: 255px;
+    width: 100%;
+    display: block;
+    font-family: type(sans);
+    font-size: calc-rem(17px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 auto;
+    color: palette(white);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .image--credit {
+    margin-top: calc-rem(15px);
+    position: absolute;
+    right: 0;
+    padding-right: calc-rem(15px);
+    bottom: calc-rem(16px);
+  }
+}
+.image--credit {
+  font-size: calc-rem(12px);
+  line-height: 1;
+  @media #{$wide} {
+    font-size: calc-rem(14px);
+  }
+  @media #{$small} {
+    padding: 0 1rem;
+  }
+}
+
+.paragraph--type--hero-slider {
+  .carousel-caption {
+    &.text-theme-dark {
+      color: palette(black);
+      h1,
+      h2,
+      h3 {
+        color: palette(black);
+      }
+      p, ul, ol, h4, h5, h6 {
+        color: palette(neutral-black);
+      }
+      p {
+        a:not(.button) {
+          transition: color 0.3s ease;
+          text-decoration: underline;
+          color: palette(brand-accent);
+          &:hover {
+            color: palette(brand-accent-light);
+          }
+        }
+      }
+    }
+    &.text-theme-light {
+      h1,
+      h2,
+      h3 {
+        color: palette(white);
+      }
+      p, ul, ol, h4, h5, h6 {
+        color: palette(white);
+      }
+      p {
+        a:not(.button) {
+          transition: color 0.3s ease;
+          text-decoration: underline;
+          color: palette(brand-accent-light);
+          &:hover {
+            color: palette(brand-accent);
+          }
+        }
+      }
+    }
+    &.text-theme-default {
+      h1,
+      h2,
+      h3 {
+        color: palette(brand-primary);
+      }
+      p, ul, ol, h4, h5, h6 {
+        color: palette(neutral-dark-grey);
+      }
+      p {
+        a:not(.button) {
+          transition: color 0.3s ease;
+          text-decoration: underline;
+          color: palette(brand-accent);
+          &:hover {
+            color: palette(brand-accent-light);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div class="{{ wrapper_class }}">
+  <div {{bem( null, null, null, classes) }} >
+    {{ title_prefix }}
+      {% block label %}
+        {% if label %}
+          {% include '@atoms/text/headings/heading.twig' with {
+            "heading_level": heading_level ?: 4,
+            "heading": label
+          } %}
+        {% endif %}
+      {% endblock label %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>

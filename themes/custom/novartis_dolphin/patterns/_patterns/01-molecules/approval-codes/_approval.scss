@@ -1,0 +1,46 @@
+// Approval and Disclaimer codes on Footer.
+.region-footer-third {
+  padding: calc-rem(15px) 0 calc-rem(40px);
+  @media #{$desktop} {
+    padding: calc-rem(10px) 0;
+  }
+  > div {
+    @media #{$tablet} {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.site-footer__second {
+  max-width: $max-width;
+  margin: auto;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+.site-footer__third {
+  text-align: center;
+}
+
+.block-approval-code {
+  margin: auto !important;
+}
+
+.approval-code,
+.disclaimer-text,
+.copyright-text {
+  font-family: type(sans);
+  font-size: calc-rem(13px);
+  color: palette(neutral-light-grey);
+  display: inline-block;
+  margin-right: calc-rem(8px);
+  margin-left: calc-rem(8px);
+
+  span {
+    pointer-events: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

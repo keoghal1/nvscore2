@@ -1,0 +1,8 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "value": ["Secondary"],
+      "class": "button--secondary"
+    }
+  }
+}
